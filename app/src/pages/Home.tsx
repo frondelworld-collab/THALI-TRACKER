@@ -12,23 +12,34 @@ export default function Home() {
     { enabled: true }
   );
 
-  const { data: popularFoods } = trpc.food.popular.useQuery();
-  const { data: categories } = trpc.food.categories.useQuery();
+  const popularFoods = [
+    { id: 1, name: "Dal Makhani", calories: 320, image: "/dal-makhani.jpg", categoryId: 4 },
+    { id: 2, name: "Jeera Rice", calories: 210, image: "/jeera-rice.jpg", categoryId: 6 },
+    { id: 3, name: "Paneer Tikka", calories: 280, image: "/paneer-tikka.jpg", categoryId: 2 },
+    { id: 4, name: "Chole Bhature", calories: 450, image: "/chole-masala.jpg", categoryId: 4 },
+    { id: 5, name: "Tandoori Roti", calories: 120, image: "/tandoori-roti.jpg", categoryId: 1 },
+    { id: 6, name: "Butter Chicken", calories: 490, image: "/butter-chicken.jpg", categoryId: 2 }
+  ];
+  const categories = [
+    { id: 1, name: "Grains & Breads" },
+    { id: 2, name: "Proteins" },
+    { id: 4, name: "Lentils & Dal" },
+    { id: 6, name: "Rice" }
+  ];
+
+  const activityItems = popularFoods.map((food, i) => ({
+    id: food.id,
+    name: food.name,
+    calories: food.calories,
+    image: food.image ?? "/hero-thali.jpg",
+    category: categories.find((c) => c.id === food.categoryId)?.name ?? "",
+    span: i % 3 === 0 ? "row-span-2" : "row-span-1",
+  }));
 
   const totals = todayData?.totals ?? { calories: 0, protein: 0, carbs: 0, fats: 0 };
   const log = todayData?.log;
   const calorieGoal = log?.calorieGoal ?? 2000;
   const calPercent = Math.min((totals.calories / calorieGoal) * 100, 100);
-
-
-  const activityItems = popularFoods?.slice(0, 6).map((food, i) => ({
-    id: food.id,
-    name: food.name,
-    calories: food.calories,
-    image: food.image ?? "/hero-thali.jpg",
-    category: categories?.find((c) => c.id === food.categoryId)?.name ?? "",
-    span: i % 3 === 0 ? "row-span-2" : "row-span-1",
-  })) ?? [];
 
   return (
     <div className="max-w-lg mx-auto">

@@ -59,6 +59,24 @@ export default function Profile() {
   };
 
   const [showSettings, setShowSettings] = useState(false);
+  const [localGoals, setLocalGoals] = useState(() => {
+    const saved = localStorage.getItem("localGoals");
+    return saved ? JSON.parse(saved) : {
+      calorieGoal: 2000,
+      proteinGoal: 60,
+      carbsGoal: 250,
+      fatsGoal: 70
+    };
+  });
+  const [dietaryPref, setDietaryPref] = useState(() => localStorage.getItem("dietaryPref") || "None");
+  const [healthFocus, setHealthFocus] = useState(() => localStorage.getItem("healthFocus") || "None");
+
+  const handleUpdateLocalGoal = (field: "calorieGoal" | "proteinGoal" | "carbsGoal" | "fatsGoal", delta: number) => {
+    const newVal = Math.max(0, localGoals[field] + delta);
+    const newGoals = { ...localGoals, [field]: newVal };
+    setLocalGoals(newGoals);
+    localStorage.setItem("localGoals", JSON.stringify(newGoals));
+  };
 
   const earned = badgeData?.earned ?? [];
   const available = badgeData?.available ?? [];
@@ -181,33 +199,33 @@ export default function Profile() {
           {[
             {
               label: "Calorie Goal",
-              field: "calorieGoal",
+              field: "calorieGoal" as const,
               step: 50,
-              value: log?.calorieGoal ?? 2000,
+              value: localGoals.calorieGoal,
               unit: "kcal",
               color: "text-[#c2410c]",
             },
             {
               label: "Protein Goal",
-              field: "proteinGoal",
+              field: "proteinGoal" as const,
               step: 5,
-              value: log?.proteinGoal ?? 60,
+              value: localGoals.proteinGoal,
               unit: "g",
               color: "text-[#f59e0b]",
             },
             {
               label: "Carbs Goal",
-              field: "carbsGoal",
+              field: "carbsGoal" as const,
               step: 10,
-              value: log?.carbsGoal ?? 250,
+              value: localGoals.carbsGoal,
               unit: "g",
               color: "text-[#22c55e]",
             },
             {
               label: "Fats Goal",
-              field: "fatsGoal",
+              field: "fatsGoal" as const,
               step: 5,
-              value: log?.fatsGoal ?? 70,
+              value: localGoals.fatsGoal,
               unit: "g",
               color: "text-[#f97316]",
             },
@@ -221,16 +239,14 @@ export default function Profile() {
               </div>
               <div className="flex items-center gap-2">
                 <button 
-                  onClick={() => handleUpdateGoal(goal.field, -goal.step)}
-                  disabled={updateGoals.isPending}
-                  className="w-7 h-7 rounded-lg bg-[#f5f5f4] flex items-center justify-center text-[#78716c] hover:bg-[#e7e5e4] transition-colors text-sm font-bold disabled:opacity-50"
+                  onClick={() => handleUpdateLocalGoal(goal.field, -goal.step)}
+                  className="w-7 h-7 rounded-lg bg-[#f5f5f4] flex items-center justify-center text-[#78716c] hover:bg-[#e7e5e4] transition-colors text-sm font-bold"
                 >
                   -
                 </button>
                 <button 
-                  onClick={() => handleUpdateGoal(goal.field, goal.step)}
-                  disabled={updateGoals.isPending}
-                  className="w-7 h-7 rounded-lg bg-[#f5f5f4] flex items-center justify-center text-[#78716c] hover:bg-[#e7e5e4] transition-colors text-sm font-bold disabled:opacity-50"
+                  onClick={() => handleUpdateLocalGoal(goal.field, goal.step)}
+                  className="w-7 h-7 rounded-lg bg-[#f5f5f4] flex items-center justify-center text-[#78716c] hover:bg-[#e7e5e4] transition-colors text-sm font-bold"
                 >
                   +
                 </button>
@@ -244,7 +260,12 @@ export default function Profile() {
               {["None", "Vegetarian", "Vegan", "Gluten Free"].map((pref) => (
                 <button
                   key={pref}
-                  className="px-3 py-1.5 rounded-full text-[10px] font-medium bg-[#f5f5f4] text-[#78716c] hover:bg-[#c2410c] hover:text-white transition-colors"
+                  onClick={() => { setDietaryPref(pref); localStorage.setItem("dietaryPref", pref); }}
+                  className={`px-3 py-1.5 rounded-full text-[10px] font-medium transition-colors ${
+                    dietaryPref === pref
+                      ? "bg-[#c2410c] text-white"
+                      : "bg-[#f5f5f4] text-[#78716c] hover:bg-[#c2410c] hover:text-white"
+                  }`}
                 >
                   {pref}
                 </button>
@@ -259,7 +280,12 @@ export default function Profile() {
                 (focus) => (
                   <button
                     key={focus}
-                    className="px-3 py-1.5 rounded-full text-[10px] font-medium bg-[#f5f5f4] text-[#78716c] hover:bg-[#c2410c] hover:text-white transition-colors"
+                    onClick={() => { setHealthFocus(focus); localStorage.setItem("healthFocus", focus); }}
+                    className={`px-3 py-1.5 rounded-full text-[10px] font-medium transition-colors ${
+                      healthFocus === focus
+                        ? "bg-[#c2410c] text-white"
+                        : "bg-[#f5f5f4] text-[#78716c] hover:bg-[#c2410c] hover:text-white"
+                    }`}
                   >
                     {focus}
                   </button>

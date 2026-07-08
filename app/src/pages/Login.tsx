@@ -26,13 +26,14 @@ export default function Login() {
         </CardHeader>
         <CardContent>
           <Button
-            className="w-full"
+            className="w-full bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 font-medium flex items-center justify-center gap-2"
             size="lg"
             onClick={() => {
               window.location.href = getOAuthUrl();
             }}
           >
-            Sign in with Kimi
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" className="w-5 h-5" />
+            Sign in with Google
           </Button>
         </CardContent>
       </Card>
