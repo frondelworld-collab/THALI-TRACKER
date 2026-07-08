@@ -1,0 +1,826 @@
+{
+  "Basmati Rice (Steamed)": {
+    "id": 53,
+    "name": "Basmati Rice (Steamed)",
+    "image_path": "/assets/images/001_basmati_rice_steamed.webp",
+    "jpg_path": "/assets/images/001_basmati_rice_steamed.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": true,
+    "prompt": "Photo style, dark moody editorial food photography of steamed basmati rice, fluffy white long-grain rice perfectly cooked with slight sheen and individual grains visible. Small black bowl on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, simple white elegant presentation with single saffron strand. Fresh garnish, ghee gleaming, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a rustic metal plate"
+  },
+  "Jeera Rice": {
+    "id": 32,
+    "name": "Jeera Rice",
+    "image_path": "/assets/images/032_jeera_rice.webp",
+    "jpg_path": "/assets/images/032_jeera_rice.jpg",
+    "category_id": 6,
+    "generation_status": "success",
+    "verification_flag": true,
+    "prompt": "Photo style, dark moody editorial food photography of jeera rice, fragrant basmati rice tinted light golden-yellow with visible cumin seeds scattered throughout, ghee sheen on surface. Black bowl on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, golden-yellow with dark cumin seeds. Cumin seeds clearly visible, fresh garnish, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a steel thali"
+  },
+  "Veg Pulao": {
+    "id": 54,
+    "name": "Veg Pulao",
+    "image_path": "/assets/images/003_veg_pulao.webp",
+    "jpg_path": "/assets/images/003_veg_pulao.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of vegetable pulao, colorful mixed vegetable rice with visible diced carrots, green peas, cauliflower florets, and whole spices cinnamon stick cloves bay leaf. Light yellow-tinted basmati rice. Black bowl on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, yellow-orange with colorful vegetables. Fresh coriander garnish, ghee gleaming, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a rustic metal plate"
+  },
+  "Veg Biryani": {
+    "id": 34,
+    "name": "Veg Biryani",
+    "image_path": "/assets/images/004_veg_biryani.webp",
+    "jpg_path": "/assets/images/004_veg_biryani.jpg",
+    "category_id": 6,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of vegetable biryani, layered aromatic basmati rice with saffron-yellow top layer, visible mixed vegetables carrots peas cauliflower beans and fried onions. Traditional copper handi on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, yellow-orange layers with mint garnish. Fresh garnish, ghee gleaming, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a steel thali"
+  },
+  "Chicken Biryani": {
+    "id": 55,
+    "name": "Chicken Biryani",
+    "image_path": "/assets/images/005_chicken_biryani.webp",
+    "jpg_path": "/assets/images/005_chicken_biryani.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of chicken biryani, layered aromatic basmati rice with saffron-colored top layer, tender chicken pieces visible, crispy fried onions, boiled egg half with bright yellow yolk, fresh mint garnish. Traditional copper handi on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, orange-yellow-white layers. Fresh garnish, ghee gleaming, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a traditional copper bowl or black clay handi"
+  },
+  "Mutton Biryani": {
+    "id": 56,
+    "name": "Mutton Biryani",
+    "image_path": "/assets/images/006_mutton_biryani.webp",
+    "jpg_path": "/assets/images/006_mutton_biryani.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of mutton biryani, layered aromatic basmati rice with deep saffron and brown-tinted layers, tender mutton pieces with bone visible, crispy fried onions, boiled egg, fresh mint and coriander. Black bowl on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, darker richer than chicken biryani. Fresh garnish, ghee gleaming, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a deep black clay handi"
+  },
+  "Egg Biryani": {
+    "id": 57,
+    "name": "Egg Biryani",
+    "image_path": "/assets/images/007_egg_biryani.webp",
+    "jpg_path": "/assets/images/007_egg_biryani.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of egg biryani, layered aromatic basmati rice with yellow saffron tint, whole boiled eggs cut in half with bright yellow yolk prominently visible on top, crispy fried onions, fresh coriander. Black bowl on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, lighter than mutton biryani eggs star feature. Fresh garnish, ghee gleaming, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a small copper bowl"
+  },
+  "Khichdi": {
+    "id": 58,
+    "name": "Khichdi",
+    "image_path": "/assets/images/008_khichdi.webp",
+    "jpg_path": "/assets/images/008_khichdi.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of khichdi, creamy soft mushy rice and moong dal mixture, pale yellow-golden color, ghee drizzled on top with cumin seeds tempering and fresh curry leaves. Black bowl on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, comfort food soft creamy texture. Fresh garnish, ghee gleaming, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a rustic metal plate"
+  },
+  "Curd Rice": {
+    "id": 35,
+    "name": "Curd Rice",
+    "image_path": "/assets/images/009_curd_rice.webp",
+    "jpg_path": "/assets/images/009_curd_rice.jpg",
+    "category_id": 6,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of curd rice, creamy white rice mixed with thick yogurt, tempered with mustard seeds curry leaves and dried red chillies visible on top. Black bowl on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, creamy white with golden tempering. Cool creamy appearance, fresh garnish, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a steel thali"
+  },
+  "Lemon Rice": {
+    "id": 36,
+    "name": "Lemon Rice",
+    "image_path": "/assets/images/010_lemon_rice.webp",
+    "jpg_path": "/assets/images/010_lemon_rice.jpg",
+    "category_id": 6,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of lemon rice, bright yellow rice tinted with turmeric and lemon juice, visible peanuts mustard seeds curry leaves and dried red chillies. Banana leaf on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, bright yellow distinct from other rice dishes. Fresh lemon wedge on side, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a steel thali"
+  },
+  "Tamarind Rice": {
+    "id": 59,
+    "name": "Tamarind Rice",
+    "image_path": "/assets/images/011_tamarind_rice.webp",
+    "jpg_path": "/assets/images/011_tamarind_rice.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of tamarind rice, tangy reddish-brown rice with visible peanuts curry leaves mustard seeds and dried red chillies. Banana leaf on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, reddish-brown from tamarind darker than lemon rice. Fresh garnish, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a rustic metal plate"
+  },
+  "Pongal": {
+    "id": 60,
+    "name": "Pongal",
+    "image_path": "/assets/images/012_pongal.webp",
+    "jpg_path": "/assets/images/012_pongal.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of ven pongal, creamy white rice and moong dal dish with black pepper and cumin seed tempering, golden cashew nuts glistening with ghee, fresh curry leaves. Black bowl on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, creamy white with golden cashews and black pepper dots. Fresh garnish, ghee gleaming, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a rustic metal plate"
+  },
+  "Chapati": {
+    "id": 3,
+    "name": "Chapati",
+    "image_path": "/assets/images/024_chapati.webp",
+    "jpg_path": "/assets/images/024_chapati.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of chapati, soft whole wheat Indian flatbread light brown with small golden spots, stacked neatly 2-3 pieces simple home-style presentation. Softer and lighter than roti no heavy charring. Steel plate on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, light brown with golden spots. Fresh garnish, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a rustic griddle or a warm cotton cloth in a wicker basket"
+  },
+  "Tandoori Roti": {
+    "id": 2,
+    "name": "Tandoori Roti",
+    "image_path": "/assets/images/025_tandoori_roti.webp",
+    "jpg_path": "/assets/images/025_tandoori_roti.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of tandoori roti, whole wheat flatbread with dark charred blisters and rustic texture, slightly thicker than chapati with prominent dark brown charred spots. Steel plate on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, golden-brown with dark rustic blisters. Fresh garnish, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a rustic metal plate"
+  },
+  "Butter Naan": {
+    "id": 1,
+    "name": "Butter Naan",
+    "image_path": "/assets/images/026_butter_naan.webp",
+    "jpg_path": "/assets/images/026_butter_naan.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of butter naan, soft fluffy Indian flatbread with golden charred spots, melted butter glistening on surface, fresh coriander sprinkled, stacked 2 pieces. Rich golden-brown with dark charred blisters, steam rising. Warm dark rustic wooden board. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, golden with butter glistening. Fresh coriander, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a warm dark wooden serving board"
+  },
+  "Garlic Naan": {
+    "name": "Garlic Naan",
+    "image_path": "/assets/images/027_garlic_naan.webp",
+    "jpg_path": "/assets/images/027_garlic_naan.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Plain Paratha": {
+    "name": "Plain Paratha",
+    "image_path": "/assets/images/028_plain_paratha.webp",
+    "jpg_path": "/assets/images/028_plain_paratha.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Aloo Paratha": {
+    "name": "Aloo Paratha",
+    "image_path": "/assets/images/029_aloo_paratha.webp",
+    "jpg_path": "/assets/images/029_aloo_paratha.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Gobi Paratha": {
+    "name": "Gobi Paratha",
+    "image_path": "/assets/images/030_gobi_paratha.webp",
+    "jpg_path": "/assets/images/030_gobi_paratha.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Paneer Paratha": {
+    "name": "Paneer Paratha",
+    "image_path": "/assets/images/031_paneer_paratha.webp",
+    "jpg_path": "/assets/images/031_paneer_paratha.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Bhatura": {
+    "name": "Bhatura",
+    "image_path": "/assets/images/033_bhatura.webp",
+    "jpg_path": "/assets/images/033_bhatura.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Puri": {
+    "name": "Puri",
+    "image_path": "/assets/images/034_puri.webp",
+    "jpg_path": "/assets/images/034_puri.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Rumaali Roti": {
+    "name": "Rumaali Roti",
+    "image_path": "/assets/images/035_rumaali_roti.webp",
+    "jpg_path": "/assets/images/035_rumaali_roti.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Missi Roti": {
+    "name": "Missi Roti",
+    "image_path": "/assets/images/068_missi_roti.webp",
+    "jpg_path": "/assets/images/068_missi_roti.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Yellow Dal Tadka": {
+    "name": "Yellow Dal Tadka",
+    "image_path": "/assets/images/037_yellow_dal_tadka.webp",
+    "jpg_path": "/assets/images/037_yellow_dal_tadka.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Dal Makhani": {
+    "name": "Dal Makhani",
+    "image_path": "/assets/images/021_dal_makhani.webp",
+    "jpg_path": "/assets/images/021_dal_makhani.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Chole Masala": {
+    "name": "Chole Masala",
+    "image_path": "/assets/images/023_chole_masala.webp",
+    "jpg_path": "/assets/images/023_chole_masala.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Rajma Masala": {
+    "name": "Rajma Masala",
+    "image_path": "/assets/images/040_rajma_masala.webp",
+    "jpg_path": "/assets/images/040_rajma_masala.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Masoor Dal": {
+    "name": "Masoor Dal",
+    "image_path": "/assets/images/041_masoor_dal.webp",
+    "jpg_path": "/assets/images/041_masoor_dal.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Sambhar": {
+    "name": "Sambhar",
+    "image_path": "/assets/images/042_sambhar.webp",
+    "jpg_path": "/assets/images/042_sambhar.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Rasam": {
+    "name": "Rasam",
+    "image_path": "/assets/images/043_rasam.webp",
+    "jpg_path": "/assets/images/043_rasam.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Kadhi Pakora": {
+    "name": "Kadhi Pakora",
+    "image_path": "/assets/images/044_kadhi_pakora.webp",
+    "jpg_path": "/assets/images/044_kadhi_pakora.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Lobia Curry": {
+    "name": "Lobia Curry",
+    "image_path": "/assets/images/045_lobia_curry.webp",
+    "jpg_path": "/assets/images/045_lobia_curry.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Moong Dal Khichdi": {
+    "name": "Moong Dal Khichdi",
+    "image_path": "/assets/images/046_moong_dal_khichdi.webp",
+    "jpg_path": "/assets/images/046_moong_dal_khichdi.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Aloo Gobi": {
+    "name": "Aloo Gobi",
+    "image_path": "/assets/images/048_aloo_gobi.webp",
+    "jpg_path": "/assets/images/048_aloo_gobi.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Bhindi Masala": {
+    "name": "Bhindi Masala",
+    "image_path": "/assets/images/049_bhindi_masala.webp",
+    "jpg_path": "/assets/images/049_bhindi_masala.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Baingan Bharta": {
+    "name": "Baingan Bharta",
+    "image_path": "/assets/images/050_baingan_bharta.webp",
+    "jpg_path": "/assets/images/050_baingan_bharta.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Mixed Veg Sabzi": {
+    "name": "Mixed Veg Sabzi",
+    "image_path": "/assets/images/051_mixed_veg_sabzi.webp",
+    "jpg_path": "/assets/images/051_mixed_veg_sabzi.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Aloo Matar": {
+    "name": "Aloo Matar",
+    "image_path": "/assets/images/052_aloo_matar.webp",
+    "jpg_path": "/assets/images/052_aloo_matar.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Gobi Matar Masala": {
+    "name": "Gobi Matar Masala",
+    "image_path": "/assets/images/053_gobi_matar_masala.webp",
+    "jpg_path": "/assets/images/053_gobi_matar_masala.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Dum Aloo": {
+    "name": "Dum Aloo",
+    "image_path": "/assets/images/054_dum_aloo.webp",
+    "jpg_path": "/assets/images/054_dum_aloo.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Mango Lassi": {
+    "name": "Mango Lassi",
+    "image_path": "/assets/images/079_mango_lassi.webp",
+    "jpg_path": "/assets/images/079_mango_lassi.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Avial": {
+    "name": "Avial",
+    "image_path": "/assets/images/055_avial.webp",
+    "jpg_path": "/assets/images/055_avial.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Lauki Ki Sabzi": {
+    "name": "Lauki Ki Sabzi",
+    "image_path": "/assets/images/056_lauki_ki_sabzi.webp",
+    "jpg_path": "/assets/images/056_lauki_ki_sabzi.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Paneer Butter Masala": {
+    "name": "Paneer Butter Masala",
+    "image_path": "/assets/images/057_paneer_butter_masala.webp",
+    "jpg_path": "/assets/images/057_paneer_butter_masala.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Palak Paneer": {
+    "name": "Palak Paneer",
+    "image_path": "/assets/images/058_palak_paneer.webp",
+    "jpg_path": "/assets/images/058_palak_paneer.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Kadai Paneer": {
+    "name": "Kadai Paneer",
+    "image_path": "/assets/images/059_kadai_paneer.webp",
+    "jpg_path": "/assets/images/059_kadai_paneer.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Shahi Paneer": {
+    "name": "Shahi Paneer",
+    "image_path": "/assets/images/060_shahi_paneer.webp",
+    "jpg_path": "/assets/images/060_shahi_paneer.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Paneer Bhurji": {
+    "name": "Paneer Bhurji",
+    "image_path": "/assets/images/061_paneer_bhurji.webp",
+    "jpg_path": "/assets/images/061_paneer_bhurji.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Matar Paneer": {
+    "name": "Matar Paneer",
+    "image_path": "/assets/images/062_matar_paneer.webp",
+    "jpg_path": "/assets/images/062_matar_paneer.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Malai Kofta": {
+    "name": "Malai Kofta",
+    "image_path": "/assets/images/063_malai_kofta.webp",
+    "jpg_path": "/assets/images/063_malai_kofta.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Raita": {
+    "name": "Raita",
+    "image_path": "/assets/images/064_raita.webp",
+    "jpg_path": "/assets/images/064_raita.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Paneer Tikka": {
+    "name": "Paneer Tikka",
+    "image_path": "/assets/images/008_paneer_tikka.webp",
+    "jpg_path": "/assets/images/008_paneer_tikka.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Butter Chicken": {
+    "name": "Butter Chicken",
+    "image_path": "/assets/images/009_butter_chicken.webp",
+    "jpg_path": "/assets/images/009_butter_chicken.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Chicken Tikka Masala": {
+    "name": "Chicken Tikka Masala",
+    "image_path": "/assets/images/067_chicken_tikka_masala.webp",
+    "jpg_path": "/assets/images/067_chicken_tikka_masala.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Chicken Curry": {
+    "name": "Chicken Curry",
+    "image_path": "/assets/images/068_chicken_curry.webp",
+    "jpg_path": "/assets/images/068_chicken_curry.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Mutton Curry": {
+    "name": "Mutton Curry",
+    "image_path": "/assets/images/069_mutton_curry.webp",
+    "jpg_path": "/assets/images/069_mutton_curry.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Goan Fish Curry": {
+    "name": "Goan Fish Curry",
+    "image_path": "/assets/images/070_goan_fish_curry.webp",
+    "jpg_path": "/assets/images/070_goan_fish_curry.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Egg Curry": {
+    "name": "Egg Curry",
+    "image_path": "/assets/images/071_egg_curry.webp",
+    "jpg_path": "/assets/images/071_egg_curry.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Egg Bhurji": {
+    "name": "Egg Bhurji",
+    "image_path": "/assets/images/072_egg_bhurji.webp",
+    "jpg_path": "/assets/images/072_egg_bhurji.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Chicken Seekh Kebab": {
+    "name": "Chicken Seekh Kebab",
+    "image_path": "/assets/images/073_chicken_seekh_kebab.webp",
+    "jpg_path": "/assets/images/073_chicken_seekh_kebab.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Tandoori Chicken": {
+    "name": "Tandoori Chicken",
+    "image_path": "/assets/images/074_tandoori_chicken.webp",
+    "jpg_path": "/assets/images/074_tandoori_chicken.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Fish Fry": {
+    "name": "Fish Fry",
+    "image_path": "/assets/images/075_fish_fry.webp",
+    "jpg_path": "/assets/images/075_fish_fry.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Idli": {
+    "id": 7,
+    "name": "Idli",
+    "image_path": "/assets/images/013_idli.webp",
+    "jpg_path": "/assets/images/013_idli.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of idli, two fluffy white steamed rice cakes, soft pillowy texture with slight sheen and tiny air pockets visible. Banana leaf-lined steel plate on warm dark rustic wooden surface, white coconut chutney and orange sambar in small black bowl beside. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, pristine white with golden accompaniments. Fresh coriander garnish, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a fresh green banana leaf"
+  },
+  "Plain Dosa": {
+    "id": 6,
+    "name": "Plain Dosa",
+    "image_path": "/assets/images/014_plain_dosa.webp",
+    "jpg_path": "/assets/images/014_plain_dosa.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of plain dosa, thin crispy golden-brown rice crepe folded elegantly, showing characteristic lacy porous surface and crispy darkened edges. Fresh green banana leaf on warm dark rustic wooden surface, white coconut chutney and orange sambar in small copper bowl. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, golden-brown with dark crispy edges. Fresh coriander, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a fresh green banana leaf"
+  },
+  "Masala Dosa": {
+    "id": 89,
+    "name": "Masala Dosa",
+    "image_path": "/assets/images/015_masala_dosa.webp",
+    "jpg_path": "/assets/images/015_masala_dosa.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of masala dosa, large crispy golden-brown rice crepe folded with visible spiced potato filling aloo masala peeking out, showing lacy porous surface. Fresh green banana leaf on warm dark rustic wooden surface, white coconut chutney and orange sambar. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, golden-brown larger more filled than plain dosa. Fresh coriander, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a fresh green banana leaf"
+  },
+  "Rava Dosa": {
+    "id": 90,
+    "name": "Rava Dosa",
+    "image_path": "/assets/images/016_rava_dosa.webp",
+    "jpg_path": "/assets/images/016_rava_dosa.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of rava dosa, thin crispy semolina crepe with characteristic lacy web-like pattern and golden-brown color, slightly thicker and more textured than plain dosa. Fresh green banana leaf on warm dark rustic wooden surface, white coconut chutney. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, golden-brown with web-like pattern. Fresh coriander, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a fresh green banana leaf"
+  },
+  "Medu Vada": {
+    "name": "Medu Vada",
+    "image_path": "/assets/images/047_medu_vada.webp",
+    "jpg_path": "/assets/images/047_medu_vada.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Uttapam": {
+    "name": "Uttapam",
+    "image_path": "/assets/images/092_uttapam.webp",
+    "jpg_path": "/assets/images/092_uttapam.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Upma": {
+    "name": "Upma",
+    "image_path": "/assets/images/093_upma.webp",
+    "jpg_path": "/assets/images/093_upma.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Poha": {
+    "id": 94,
+    "name": "Poha",
+    "image_path": "/assets/images/019_poha.webp",
+    "jpg_path": "/assets/images/019_poha.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of poha, flattened rice flakes tempered with mustard seeds curry leaves peanuts and diced potatoes, light golden color with visible flat rice flakes. Steel plate on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, light golden with visible flakes. Fresh coriander and lemon wedge, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a rustic brass plate"
+  },
+  "Puri Bhaji": {
+    "id": 95,
+    "name": "Puri Bhaji",
+    "image_path": "/assets/images/020_puri_bhaji.webp",
+    "jpg_path": "/assets/images/020_puri_bhaji.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of puri bhaji, two golden puffed deep-fried puris perfectly round and puffy, served with spiced potato bhaji aloo sabzi in black bowl. Steel plate on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, puffy golden puris distinct from parathas. Fresh garnish, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a steel thali"
+  },
+  "Bread Omelette": {
+    "name": "Bread Omelette",
+    "image_path": "/assets/images/076_bread_omelette.webp",
+    "jpg_path": "/assets/images/076_bread_omelette.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Rava Idli": {
+    "id": 97,
+    "name": "Rava Idli",
+    "image_path": "/assets/images/021_rava_idli.webp",
+    "jpg_path": "/assets/images/021_rava_idli.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of rava idli, two soft white semolina idlis slightly coarser texture than regular idli, visible carrot and coriander pieces in the batter. Steel plate with banana leaf on warm dark rustic wooden surface, white coconut chutney. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, soft white with orange carrot dots. Fresh coriander, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a fresh green banana leaf"
+  },
+  "Appam": {
+    "id": 98,
+    "name": "Appam",
+    "image_path": "/assets/images/022_appam.webp",
+    "jpg_path": "/assets/images/022_appam.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of appam, two soft white lacy-edged rice pancakes with crispy golden-brown lace-like edges and soft fluffy white center. Banana leaf on warm dark rustic wooden surface, distinctive bowl shape with crispy lacy edges, white coconut milk stew ishtu in small black bowl. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, white with golden lacy edges. Fresh garnish, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a rustic metal plate"
+  },
+  "Sabudana Khichdi": {
+    "id": 99,
+    "name": "Sabudana Khichdi",
+    "image_path": "/assets/images/023_sabudana_khichdi.webp",
+    "jpg_path": "/assets/images/023_sabudana_khichdi.jpg",
+    "category_id": 1,
+    "generation_status": "success",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of sabudana khichdi, translucent glossy tapioca pearls sabudana mixed with roasted peanuts diced potatoes and cumin seeds, glistening translucent pearls distinct from rice. Steel plate on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, translucent glossy pearls. Fresh coriander, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a rustic metal plate"
+  },
+  "Samosa": {
+    "name": "Samosa",
+    "image_path": "/assets/images/077_samosa.webp",
+    "jpg_path": "/assets/images/077_samosa.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Onion Pakora": {
+    "name": "Onion Pakora",
+    "image_path": "/assets/images/078_onion_pakora.webp",
+    "jpg_path": "/assets/images/078_onion_pakora.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Aloo Tikki": {
+    "name": "Aloo Tikki",
+    "image_path": "/assets/images/080_aloo_tikki.webp",
+    "jpg_path": "/assets/images/080_aloo_tikki.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Pani Puri": {
+    "name": "Pani Puri",
+    "image_path": "/assets/images/081_pani_puri.webp",
+    "jpg_path": "/assets/images/081_pani_puri.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Bhel Puri": {
+    "name": "Bhel Puri",
+    "image_path": "/assets/images/082_bhel_puri.webp",
+    "jpg_path": "/assets/images/082_bhel_puri.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Sev Puri": {
+    "name": "Sev Puri",
+    "image_path": "/assets/images/083_sev_puri.webp",
+    "jpg_path": "/assets/images/083_sev_puri.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Dahi Vada": {
+    "name": "Dahi Vada",
+    "image_path": "/assets/images/084_dahi_vada.webp",
+    "jpg_path": "/assets/images/084_dahi_vada.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Pav Bhaji": {
+    "name": "Pav Bhaji",
+    "image_path": "/assets/images/106_pav_bhaji.webp",
+    "jpg_path": "/assets/images/106_pav_bhaji.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Vada Pav": {
+    "name": "Vada Pav",
+    "image_path": "/assets/images/086_vada_pav.webp",
+    "jpg_path": "/assets/images/086_vada_pav.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Dhokla": {
+    "name": "Dhokla",
+    "image_path": "/assets/images/087_dhokla.webp",
+    "jpg_path": "/assets/images/087_dhokla.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Masala Chai": {
+    "name": "Masala Chai",
+    "image_path": "/assets/images/088_masala_chai.webp",
+    "jpg_path": "/assets/images/088_masala_chai.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Kachori": {
+    "name": "Kachori",
+    "image_path": "/assets/images/089_kachori.webp",
+    "jpg_path": "/assets/images/089_kachori.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Papdi Chaat": {
+    "name": "Papdi Chaat",
+    "image_path": "/assets/images/090_papdi_chaat.webp",
+    "jpg_path": "/assets/images/090_papdi_chaat.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Gulab Jamun": {
+    "name": "Gulab Jamun",
+    "image_path": "/assets/images/091_gulab_jamun.webp",
+    "jpg_path": "/assets/images/091_gulab_jamun.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Rasgulla": {
+    "name": "Rasgulla",
+    "image_path": "/assets/images/049_rasgulla.webp",
+    "jpg_path": "/assets/images/049_rasgulla.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Rice Kheer": {
+    "id": 111,
+    "name": "Rice Kheer",
+    "image_path": "/assets/images/111_rice_kheer.webp",
+    "jpg_path": "/assets/images/111_rice_kheer.jpg",
+    "category_id": 9,
+    "generation_status": "fallback",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of rice kheer, creamy white rice pudding slow-cooked with milk, sugar, cardamom, topped with golden raisins, almond slivers and pistachios. Small brass bowl on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, creamy white and golden nuts. Saffron strands on top, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a small brass bowl"
+  },
+  "Gajar Ka Halwa": {
+    "id": 112,
+    "name": "Gajar Ka Halwa",
+    "image_path": "/assets/images/112_gajar_ka_halwa.webp",
+    "jpg_path": "/assets/images/112_gajar_ka_halwa.jpg",
+    "category_id": 9,
+    "generation_status": "fallback",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of gajar ka halwa, rich sweet red carrot pudding slow-cooked in milk and ghee, loaded with chopped cashews, almonds and pistachios, steam rising. Brass bowl on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, vibrant orange-red carrot pudding. Silver leaf varq, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a brass bowl"
+  },
+  "Jalebi": {
+    "name": "Jalebi",
+    "image_path": "/assets/images/051_jalebi.webp",
+    "jpg_path": "/assets/images/051_jalebi.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Rasmalai": {
+    "name": "Rasmalai",
+    "image_path": "/assets/images/113_rasmalai.webp",
+    "jpg_path": "/assets/images/113_rasmalai.jpg",
+    "generation_status": "success",
+    "verification_flag": false
+  },
+  "Kulfi": {
+    "id": 114,
+    "name": "Kulfi",
+    "image_path": "/assets/images/114_kulfi.webp",
+    "jpg_path": "/assets/images/114_kulfi.jpg",
+    "category_id": 9,
+    "generation_status": "fallback",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of kulfi, traditional dense frozen dairy dessert on a wooden stick, flavored with cardamom, saffron, pistachios, melting slightly. Wooden stick placed on a brass plate on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, creamy yellow. Saffron strands, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a wooden stick placed on a brass plate"
+  },
+  "Besan Laddoo": {
+    "id": 115,
+    "name": "Besan Laddoo",
+    "image_path": "/assets/images/115_besan_laddoo.webp",
+    "jpg_path": "/assets/images/115_besan_laddoo.jpg",
+    "category_id": 9,
+    "generation_status": "fallback",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of besan laddoo, three round golden-yellow roasted chickpea flour sweets with ghee aroma, smooth surface with pistachio slice embedded. Silver-trimmed brass platter on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, golden-yellow spheres. Almond slivers, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a silver-trimmed brass platter"
+  },
+  "Kaju Katli": {
+    "id": 116,
+    "name": "Kaju Katli",
+    "image_path": "/assets/images/116_kaju_katli.webp",
+    "jpg_path": "/assets/images/116_kaju_katli.jpg",
+    "category_id": 9,
+    "generation_status": "fallback",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of kaju katli, diamond-shaped cashew fudge sweets covered with shiny edible silver leaf varq. Silver-trimmed brass platter on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, silver-white diamond shapes. Saffron strands, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a silver-trimmed brass platter"
+  },
+  "Peda": {
+    "id": 117,
+    "name": "Peda",
+    "image_path": "/assets/images/117_peda.webp",
+    "jpg_path": "/assets/images/117_peda.jpg",
+    "category_id": 9,
+    "generation_status": "fallback",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of peda, three semi-soft sweet milk solids fudge rounds with cardamom flavor, light beige-yellow with simple thumbprint design in center holding pistachio. Small brass platter on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, light beige. Cardamom seeds on side, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a small brass platter"
+  },
+  "Filter Coffee": {
+    "id": 47,
+    "name": "Filter Coffee",
+    "image_path": "/assets/images/047_filter_coffee.webp",
+    "jpg_path": "/assets/images/047_filter_coffee.jpg",
+    "category_id": 8,
+    "generation_status": "fallback",
+    "verification_flag": false,
+    "prompt": "Photo style, dark moody editorial food photography of filter coffee, frothy hot South Indian filter coffee with thick creamy foam layer, poured between traditional brass tumbler and davarah saucer, steam rising. Traditional brass tumbler and davarah set on warm dark rustic wooden surface. Dramatic warm directional lighting from upper left at 45 degrees, deep shadows, rich saturated colors, frothy light brown. Coffee beans scattered, professional restaurant-quality food photography, 4K, highly detailed, appetizing, food magazine editorial quality, shot on 85mm f/2.8, shallow depth of field.",
+    "serving_ware": "a traditional brass tumbler and davarah set"
+  }
+}

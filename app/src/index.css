@@ -1,0 +1,168 @@
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 44 50% 97%;
+    --foreground: 20 6% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 6% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 6% 10%;
+    --primary: 18 90% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 20 6% 90%;
+    --secondary-foreground: 20 6% 10%;
+    --muted: 30 6% 90%;
+    --muted-foreground: 25 5% 45%;
+    --accent: 18 90% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 6% 85%;
+    --input: 30 6% 85%;
+    --ring: 18 90% 40%;
+    --radius: 0.75rem;
+    --chart-1: 18 90% 40%;
+    --chart-2: 142 71% 29%;
+    --chart-3: 35 91% 63%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 200 70% 50%;
+    --sidebar-background: 44 50% 97%;
+    --sidebar-foreground: 20 6% 10%;
+    --sidebar-primary: 18 90% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 6% 90%;
+    --sidebar-accent-foreground: 20 6% 10%;
+    --sidebar-border: 30 6% 85%;
+    --sidebar-ring: 18 90% 40%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#fdfbf5] text-[#1c1917] antialiased;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}
+
+/* Plate animation styles */
+.plate-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 100%;
+  perspective: 1000px;
+  position: relative;
+}
+
+.plate {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  transform: rotateX(50deg);
+  transform-style: preserve-3d;
+}
+
+.plate svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.27);
+}
+
+.plate-base {
+  transform: translateZ(0px);
+  opacity: 1;
+}
+
+.layer {
+  transform: scale(0.5) translateZ(10px);
+  opacity: 0;
+}
+
+.layer.active {
+  transform: scale(1) translateZ(20px);
+  opacity: 1;
+}
+
+.dal-layer.active {
+  transform: scale(1) translateZ(30px) rotate(15deg);
+}
+
+.roti-layer.active {
+  transform: scale(1) translateZ(40px) rotate(-10deg);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a29e;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s ease-in-out infinite;
+}

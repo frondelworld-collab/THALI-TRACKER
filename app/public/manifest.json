@@ -1,0 +1,602 @@
+{
+  "Basmati Rice (Steamed)": {
+    "id": 53,
+    "image_path": "/food_53.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Jeera Rice": {
+    "id": 32,
+    "image_path": "/food_32.png",
+    "category_id": 6,
+    "status": "updated"
+  },
+  "Veg Pulao": {
+    "id": 54,
+    "image_path": "/food_54.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Veg Biryani": {
+    "id": 34,
+    "image_path": "/food_34.png",
+    "category_id": 6,
+    "status": "updated"
+  },
+  "Chicken Biryani": {
+    "id": 55,
+    "image_path": "/food_55.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Mutton Biryani": {
+    "id": 56,
+    "image_path": "/food_56.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Egg Biryani": {
+    "id": 57,
+    "image_path": "/food_57.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Khichdi": {
+    "id": 58,
+    "image_path": "/food_58.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Curd Rice": {
+    "id": 35,
+    "image_path": "/food_35.png",
+    "category_id": 6,
+    "status": "updated"
+  },
+  "Lemon Rice": {
+    "id": 36,
+    "image_path": "/food_36.png",
+    "category_id": 6,
+    "status": "updated"
+  },
+  "Tamarind Rice": {
+    "id": 59,
+    "image_path": "/food_59.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Pongal": {
+    "id": 60,
+    "image_path": "/food_60.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Chapati": {
+    "id": 3,
+    "image_path": "/food_3.png",
+    "category_id": 1,
+    "status": "updated"
+  },
+  "Tandoori Roti": {
+    "id": 2,
+    "image_path": "/food_2.png",
+    "category_id": 1,
+    "status": "updated"
+  },
+  "Butter Naan": {
+    "id": 1,
+    "image_path": "/food_1.png",
+    "category_id": 1,
+    "status": "updated"
+  },
+  "Garlic Naan": {
+    "id": 4,
+    "image_path": "/food_4.png",
+    "category_id": 1,
+    "status": "updated"
+  },
+  "Plain Paratha": {
+    "id": 61,
+    "image_path": "/food_61.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Aloo Paratha": {
+    "id": 62,
+    "image_path": "/food_62.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Gobi Paratha": {
+    "id": 63,
+    "image_path": "/food_63.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Paneer Paratha": {
+    "id": 64,
+    "image_path": "/food_64.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Bhatura": {
+    "id": 65,
+    "image_path": "/food_65.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Puri": {
+    "id": 66,
+    "image_path": "/food_66.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Rumaali Roti": {
+    "id": 67,
+    "image_path": "/food_67.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Missi Roti": {
+    "id": 68,
+    "image_path": "/food_68.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Yellow Dal Tadka": {
+    "id": 22,
+    "image_path": "/food_22.png",
+    "category_id": 4,
+    "status": "updated"
+  },
+  "Dal Makhani": {
+    "id": 21,
+    "image_path": "/food_21.png",
+    "category_id": 4,
+    "status": "updated"
+  },
+  "Chole Masala": {
+    "id": 23,
+    "image_path": "/food_23.png",
+    "category_id": 4,
+    "status": "updated"
+  },
+  "Rajma Masala": {
+    "id": 24,
+    "image_path": "/food_24.png",
+    "category_id": 4,
+    "status": "updated"
+  },
+  "Masoor Dal": {
+    "id": 69,
+    "image_path": "/food_69.png",
+    "category_id": 4,
+    "status": "inserted"
+  },
+  "Sambhar": {
+    "id": 70,
+    "image_path": "/food_70.png",
+    "category_id": 4,
+    "status": "inserted"
+  },
+  "Rasam": {
+    "id": 71,
+    "image_path": "/food_71.png",
+    "category_id": 4,
+    "status": "inserted"
+  },
+  "Kadhi Pakora": {
+    "id": 31,
+    "image_path": "/food_31.png",
+    "category_id": 5,
+    "status": "updated"
+  },
+  "Lobia Curry": {
+    "id": 72,
+    "image_path": "/food_72.png",
+    "category_id": 4,
+    "status": "inserted"
+  },
+  "Moong Dal Khichdi": {
+    "id": 73,
+    "image_path": "/food_73.png",
+    "category_id": 4,
+    "status": "inserted"
+  },
+  "Aloo Gobi": {
+    "id": 15,
+    "image_path": "/food_15.png",
+    "category_id": 3,
+    "status": "updated"
+  },
+  "Bhindi Masala": {
+    "id": 16,
+    "image_path": "/food_16.png",
+    "category_id": 3,
+    "status": "updated"
+  },
+  "Baingan Bharta": {
+    "id": 18,
+    "image_path": "/food_18.png",
+    "category_id": 3,
+    "status": "updated"
+  },
+  "Mixed Veg Sabzi": {
+    "id": 74,
+    "image_path": "/food_74.png",
+    "category_id": 3,
+    "status": "inserted"
+  },
+  "Aloo Matar": {
+    "id": 75,
+    "image_path": "/food_75.png",
+    "category_id": 3,
+    "status": "inserted"
+  },
+  "Gobi Matar Masala": {
+    "id": 76,
+    "image_path": "/food_76.png",
+    "category_id": 3,
+    "status": "inserted"
+  },
+  "Dum Aloo": {
+    "id": 77,
+    "image_path": "/food_77.png",
+    "category_id": 3,
+    "status": "inserted"
+  },
+  "Mango Lassi": {
+    "id": 43,
+    "image_path": "/food_43.png",
+    "category_id": 8,
+    "status": "updated"
+  },
+  "Avial": {
+    "id": 78,
+    "image_path": "/food_78.png",
+    "category_id": 3,
+    "status": "inserted"
+  },
+  "Lauki Ki Sabzi": {
+    "id": 79,
+    "image_path": "/food_79.png",
+    "category_id": 3,
+    "status": "inserted"
+  },
+  "Paneer Butter Masala": {
+    "id": 28,
+    "image_path": "/food_28.png",
+    "category_id": 5,
+    "status": "updated"
+  },
+  "Palak Paneer": {
+    "id": 27,
+    "image_path": "/food_27.png",
+    "category_id": 5,
+    "status": "updated"
+  },
+  "Kadai Paneer": {
+    "id": 80,
+    "image_path": "/food_80.png",
+    "category_id": 5,
+    "status": "inserted"
+  },
+  "Shahi Paneer": {
+    "id": 30,
+    "image_path": "/food_30.png",
+    "category_id": 5,
+    "status": "updated"
+  },
+  "Paneer Bhurji": {
+    "id": 13,
+    "image_path": "/food_13.png",
+    "category_id": 2,
+    "status": "updated"
+  },
+  "Matar Paneer": {
+    "id": 81,
+    "image_path": "/food_81.png",
+    "category_id": 5,
+    "status": "inserted"
+  },
+  "Malai Kofta": {
+    "id": 82,
+    "image_path": "/food_82.png",
+    "category_id": 5,
+    "status": "inserted"
+  },
+  "Raita": {
+    "id": 29,
+    "image_path": "/food_29.png",
+    "category_id": 5,
+    "status": "updated"
+  },
+  "Paneer Tikka": {
+    "id": 8,
+    "image_path": "/food_8.png",
+    "category_id": 2,
+    "status": "updated"
+  },
+  "Butter Chicken": {
+    "id": 9,
+    "image_path": "/food_9.png",
+    "category_id": 2,
+    "status": "updated"
+  },
+  "Chicken Tikka Masala": {
+    "id": 10,
+    "image_path": "/food_10.png",
+    "category_id": 2,
+    "status": "updated"
+  },
+  "Chicken Curry": {
+    "id": 83,
+    "image_path": "/food_83.png",
+    "category_id": 2,
+    "status": "inserted"
+  },
+  "Mutton Curry": {
+    "id": 84,
+    "image_path": "/food_84.png",
+    "category_id": 2,
+    "status": "inserted"
+  },
+  "Goan Fish Curry": {
+    "id": 85,
+    "image_path": "/food_85.png",
+    "category_id": 2,
+    "status": "inserted"
+  },
+  "Egg Curry": {
+    "id": 14,
+    "image_path": "/food_14.png",
+    "category_id": 2,
+    "status": "updated"
+  },
+  "Egg Bhurji": {
+    "id": 86,
+    "image_path": "/food_86.png",
+    "category_id": 2,
+    "status": "inserted"
+  },
+  "Chicken Seekh Kebab": {
+    "id": 87,
+    "image_path": "/food_87.png",
+    "category_id": 2,
+    "status": "inserted"
+  },
+  "Tandoori Chicken": {
+    "id": 12,
+    "image_path": "/food_12.png",
+    "category_id": 2,
+    "status": "updated"
+  },
+  "Fish Fry": {
+    "id": 88,
+    "image_path": "/food_88.png",
+    "category_id": 2,
+    "status": "inserted"
+  },
+  "Idli": {
+    "id": 7,
+    "image_path": "/food_7.png",
+    "category_id": 1,
+    "status": "updated"
+  },
+  "Plain Dosa": {
+    "id": 6,
+    "image_path": "/food_6.png",
+    "category_id": 1,
+    "status": "updated"
+  },
+  "Masala Dosa": {
+    "id": 89,
+    "image_path": "/food_89.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Rava Dosa": {
+    "id": 90,
+    "image_path": "/food_90.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Medu Vada": {
+    "id": 91,
+    "image_path": "/food_91.png",
+    "category_id": 4,
+    "status": "inserted"
+  },
+  "Uttapam": {
+    "id": 92,
+    "image_path": "/food_92.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Upma": {
+    "id": 93,
+    "image_path": "/food_93.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Poha": {
+    "id": 94,
+    "image_path": "/food_94.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Puri Bhaji": {
+    "id": 95,
+    "image_path": "/food_95.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Bread Omelette": {
+    "id": 96,
+    "image_path": "/food_96.png",
+    "category_id": 2,
+    "status": "inserted"
+  },
+  "Rava Idli": {
+    "id": 97,
+    "image_path": "/food_97.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Appam": {
+    "id": 98,
+    "image_path": "/food_98.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Sabudana Khichdi": {
+    "id": 99,
+    "image_path": "/food_99.png",
+    "category_id": 1,
+    "status": "inserted"
+  },
+  "Samosa": {
+    "id": 38,
+    "image_path": "/food_38.png",
+    "category_id": 7,
+    "status": "updated"
+  },
+  "Onion Pakora": {
+    "id": 100,
+    "image_path": "/food_100.png",
+    "category_id": 7,
+    "status": "inserted"
+  },
+  "Aloo Tikki": {
+    "id": 101,
+    "image_path": "/food_101.png",
+    "category_id": 7,
+    "status": "inserted"
+  },
+  "Pani Puri": {
+    "id": 102,
+    "image_path": "/food_102.png",
+    "category_id": 7,
+    "status": "inserted"
+  },
+  "Bhel Puri": {
+    "id": 103,
+    "image_path": "/food_103.png",
+    "category_id": 7,
+    "status": "inserted"
+  },
+  "Sev Puri": {
+    "id": 104,
+    "image_path": "/food_104.png",
+    "category_id": 7,
+    "status": "inserted"
+  },
+  "Dahi Vada": {
+    "id": 105,
+    "image_path": "/food_105.png",
+    "category_id": 7,
+    "status": "inserted"
+  },
+  "Pav Bhaji": {
+    "id": 106,
+    "image_path": "/food_106.png",
+    "category_id": 7,
+    "status": "inserted"
+  },
+  "Vada Pav": {
+    "id": 107,
+    "image_path": "/food_107.png",
+    "category_id": 7,
+    "status": "inserted"
+  },
+  "Dhokla": {
+    "id": 108,
+    "image_path": "/food_108.png",
+    "category_id": 7,
+    "status": "inserted"
+  },
+  "Masala Chai": {
+    "id": 44,
+    "image_path": "/food_44.png",
+    "category_id": 8,
+    "status": "updated"
+  },
+  "Kachori": {
+    "id": 109,
+    "image_path": "/food_109.png",
+    "category_id": 7,
+    "status": "inserted"
+  },
+  "Papdi Chaat": {
+    "id": 110,
+    "image_path": "/food_110.png",
+    "category_id": 7,
+    "status": "inserted"
+  },
+  "Gulab Jamun": {
+    "id": 48,
+    "image_path": "/food_48.png",
+    "category_id": 9,
+    "status": "updated"
+  },
+  "Rasgulla": {
+    "id": 49,
+    "image_path": "/food_49.png",
+    "category_id": 9,
+    "status": "updated"
+  },
+  "Rice Kheer": {
+    "id": 111,
+    "image_path": "/food_111.png",
+    "category_id": 9,
+    "status": "inserted"
+  },
+  "Gajar Ka Halwa": {
+    "id": 112,
+    "image_path": "/food_112.png",
+    "category_id": 9,
+    "status": "inserted"
+  },
+  "Jalebi": {
+    "id": 51,
+    "image_path": "/food_51.png",
+    "category_id": 9,
+    "status": "updated"
+  },
+  "Rasmalai": {
+    "id": 113,
+    "image_path": "/food_113.png",
+    "category_id": 9,
+    "status": "inserted"
+  },
+  "Kulfi": {
+    "id": 114,
+    "image_path": "/food_114.png",
+    "category_id": 9,
+    "status": "inserted"
+  },
+  "Besan Laddoo": {
+    "id": 115,
+    "image_path": "/food_115.png",
+    "category_id": 9,
+    "status": "inserted"
+  },
+  "Kaju Katli": {
+    "id": 116,
+    "image_path": "/food_116.png",
+    "category_id": 9,
+    "status": "inserted"
+  },
+  "Peda": {
+    "id": 117,
+    "image_path": "/food_117.png",
+    "category_id": 9,
+    "status": "inserted"
+  },
+  "Filter Coffee": {
+    "id": 47,
+    "image_path": "/food_47.png",
+    "category_id": 8,
+    "status": "updated"
+  }
+}
