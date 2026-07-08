@@ -1,7 +1,7 @@
 import { z } from "zod";
-import { createRouter, publicQuery } from "./middleware";
-import { getDb } from "./queries/connection";
-import { scanHistory, foods } from "@db/schema";
+import { createRouter, publicQuery } from "./middleware.js";
+import { getDb } from "./queries/connection.js";
+import { scanHistory, foods } from "@db/schema.js";
 import { eq, desc } from "drizzle-orm";
 
 export const scanRouter = createRouter({
@@ -64,7 +64,7 @@ export const scanRouter = createRouter({
           );
 
           if (response.ok) {
-            const data = await response.json();
+            const data = (await response.json()) as any;
             const textResponse = data.candidates?.[0]?.content?.parts?.[0]?.text;
             if (textResponse) {
               const parsed = JSON.parse(textResponse);
@@ -149,11 +149,11 @@ export const scanRouter = createRouter({
         userId: input.userId,
         imageUrl: input.imageUrl,
         detectedFood: input.detectedFood,
-        confidence: String(input.confidence.toFixed(2)),
+        confidence: Number(input.confidence.toFixed(2)),
         calories: input.calories,
-        protein: String(input.protein.toFixed(1)),
-        carbs: String(input.carbs.toFixed(1)),
-        fats: String(input.fats.toFixed(1)),
+        protein: Number(input.protein.toFixed(1)),
+        carbs: Number(input.carbs.toFixed(1)),
+        fats: Number(input.fats.toFixed(1)),
         fullResult: input.fullResult ?? null,
         isAddedToLog: false,
       });

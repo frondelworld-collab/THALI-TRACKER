@@ -1,6 +1,6 @@
-import { createRouter, publicQuery } from "./middleware";
-import { getDb } from "./queries/connection";
-import { users, foods, dailyLogs, scanHistory, logItems } from "@db/schema";
+import { createRouter, publicQuery } from "./middleware.js";
+import { getDb } from "./queries/connection.js";
+import { users, foods, dailyLogs, scanHistory, logItems } from "@db/schema.js";
 import { sql, desc } from "drizzle-orm";
 
 export const dashboardRouter = createRouter({

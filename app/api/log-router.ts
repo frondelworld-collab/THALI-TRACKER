@@ -1,7 +1,7 @@
 import { z } from "zod";
-import { createRouter, publicQuery } from "./middleware";
-import { getDb } from "./queries/connection";
-import { dailyLogs, logItems, foods, userSettings } from "@db/schema";
+import { createRouter, publicQuery } from "./middleware.js";
+import { getDb } from "./queries/connection.js";
+import { dailyLogs, logItems, foods, userSettings } from "@db/schema.js";
 import { eq, desc } from "drizzle-orm";
 
 export const logRouter = createRouter({
@@ -143,11 +143,11 @@ export const logRouter = createRouter({
       await db.insert(logItems).values({
         logId: input.logId,
         foodId: input.foodId,
-        quantity: String(q),
+        quantity: q,
         calories,
-        protein: String(protein.toFixed(1)),
-        carbs: String(carbs.toFixed(1)),
-        fats: String(fats.toFixed(1)),
+        protein: Number(protein.toFixed(1)),
+        carbs: Number(carbs.toFixed(1)),
+        fats: Number(fats.toFixed(1)),
         mealType: input.mealType,
       });
 
