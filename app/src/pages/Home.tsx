@@ -12,19 +12,28 @@ export default function Home() {
     { enabled: true }
   );
 
-  const popularFoods = [
-    { id: 1, name: "Dal Makhani", calories: 320, image: "/dal-makhani.jpg", categoryId: 4 },
-    { id: 2, name: "Jeera Rice", calories: 210, image: "/jeera-rice.jpg", categoryId: 6 },
-    { id: 3, name: "Paneer Tikka", calories: 280, image: "/paneer-tikka.jpg", categoryId: 2 },
-    { id: 4, name: "Chole Bhature", calories: 450, image: "/chole-masala.jpg", categoryId: 4 },
-    { id: 5, name: "Tandoori Roti", calories: 120, image: "/tandoori-roti.jpg", categoryId: 1 },
-    { id: 6, name: "Butter Chicken", calories: 490, image: "/butter-chicken.jpg", categoryId: 2 }
-  ];
   const categories = [
     { id: 1, name: "Grains & Breads" },
     { id: 2, name: "Proteins" },
-    { id: 4, name: "Lentils & Dal" },
-    { id: 6, name: "Rice" }
+    { id: 4, name: "Lentils & Dal" }
+  ];
+
+  const popularFoods = [
+    { id: 1, name: "Tandoori Roti", calories: 120, image: "/tandoori-roti.jpg", categoryId: 1, protein: 4, carbs: 24, fats: 1, servingSize: "1 piece" },
+    { id: 2, name: "Butter Naan", calories: 260, image: "/butter-naan.jpg", categoryId: 1, protein: 7, carbs: 38, fats: 9, servingSize: "1 piece" },
+    { id: 3, name: "Laccha Paratha", calories: 280, image: "/butter-naan.jpg", categoryId: 1, protein: 6, carbs: 40, fats: 12, servingSize: "1 piece" },
+    { id: 4, name: "Plain Rice", calories: 205, image: "/jeera-rice.jpg", categoryId: 1, protein: 4, carbs: 45, fats: 0.5, servingSize: "1 bowl" },
+    { id: 5, name: "Jeera Rice", calories: 210, image: "/jeera-rice.jpg", categoryId: 1, protein: 4, carbs: 42, fats: 3, servingSize: "1 bowl" },
+    { id: 6, name: "Missi Roti", calories: 150, image: "/tandoori-roti.jpg", categoryId: 1, protein: 6, carbs: 25, fats: 3, servingSize: "1 piece" },
+    { id: 7, name: "Paneer Tikka", calories: 280, image: "/paneer-tikka.jpg", categoryId: 2, protein: 18, carbs: 8, fats: 20, servingSize: "6 pieces" },
+    { id: 8, name: "Chicken Tikka", calories: 220, image: "/paneer-tikka.jpg", categoryId: 2, protein: 32, carbs: 4, fats: 8, servingSize: "6 pieces" },
+    { id: 9, name: "Tandoori Fish", calories: 190, image: "/butter-chicken.jpg", categoryId: 2, protein: 26, carbs: 2, fats: 9, servingSize: "1 plate" },
+    { id: 10, name: "Soya Chaap", calories: 210, image: "/paneer-tikka.jpg", categoryId: 2, protein: 15, carbs: 12, fats: 10, servingSize: "1 plate" },
+    { id: 11, name: "Egg Bhurji", calories: 180, image: "/palak-paneer.jpg", categoryId: 2, protein: 14, carbs: 4, fats: 12, servingSize: "1 bowl" },
+    { id: 12, name: "Dal Makhani", calories: 320, image: "/dal-makhani.jpg", categoryId: 4, protein: 14, carbs: 30, fats: 16, servingSize: "1 bowl" },
+    { id: 13, name: "Dal Tadka", calories: 180, image: "/dal-makhani.jpg", categoryId: 4, protein: 10, carbs: 25, fats: 5, servingSize: "1 bowl" },
+    { id: 14, name: "Chole Bhature", calories: 450, image: "/chole-masala.jpg", categoryId: 4, protein: 12, carbs: 55, fats: 15, servingSize: "1 plate" },
+    { id: 15, name: "Rajma Masala", calories: 260, image: "/chole-masala.jpg", categoryId: 4, protein: 13, carbs: 35, fats: 8, servingSize: "1 bowl" }
   ];
 
   const activityItems = popularFoods.map((food, i) => ({
