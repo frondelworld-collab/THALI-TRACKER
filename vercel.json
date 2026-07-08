@@ -1,12 +1,6 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "framework": "vite",
   "outputDirectory": "dist/public",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
