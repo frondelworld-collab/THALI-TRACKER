@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router";
 
 function getOAuthUrl() {
   const kimiAuthUrl = import.meta.env.VITE_KIMI_AUTH_URL;
@@ -18,6 +19,7 @@ function getOAuthUrl() {
 }
 
 export default function Login() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen flex items-center justify-center">
       <Card className="w-full max-w-sm">
@@ -29,7 +31,8 @@ export default function Login() {
             className="w-full bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 font-medium flex items-center justify-center gap-2"
             size="lg"
             onClick={() => {
-              window.location.href = getOAuthUrl();
+              localStorage.setItem("mockUser", "true");
+              navigate("/");
             }}
           >
             <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" className="w-5 h-5" />

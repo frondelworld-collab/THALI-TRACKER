@@ -53,10 +53,25 @@ export default function ThaliBuilder() {
   const [mealType, setMealType] = useState<"breakfast" | "lunch" | "dinner" | "snack">("lunch");
   const [showConfirm, setShowConfirm] = useState(false);
 
-  const { data: categories } = trpc.food.categories.useQuery();
-  const { data: foods } = trpc.food.list.useQuery(
-    selectedCategory ? { categoryId: selectedCategory } : undefined
-  );
+  const categories = [
+    { id: 1, name: "Grains & Breads", icon: "wheat" },
+    { id: 2, name: "Proteins", icon: "beef" },
+    { id: 4, name: "Lentils & Dal", icon: "bean" },
+    { id: 6, name: "Rice", icon: "wheat" }
+  ];
+
+  const popularFoods = [
+    { id: 1, name: "Dal Makhani", calories: 320, image: "/dal-makhani.jpg", categoryId: 4, protein: 14, carbs: 30, fats: 16, servingSize: "1 bowl" },
+    { id: 2, name: "Jeera Rice", calories: 210, image: "/jeera-rice.jpg", categoryId: 6, protein: 4, carbs: 42, fats: 3, servingSize: "1 bowl" },
+    { id: 3, name: "Paneer Tikka", calories: 280, image: "/paneer-tikka.jpg", categoryId: 2, protein: 18, carbs: 8, fats: 20, servingSize: "6 pieces" },
+    { id: 4, name: "Chole Bhature", calories: 450, image: "/chole-masala.jpg", categoryId: 4, protein: 12, carbs: 55, fats: 15, servingSize: "1 plate" },
+    { id: 5, name: "Tandoori Roti", calories: 120, image: "/tandoori-roti.jpg", categoryId: 1, protein: 4, carbs: 24, fats: 1, servingSize: "1 piece" },
+    { id: 6, name: "Butter Chicken", calories: 490, image: "/butter-chicken.jpg", categoryId: 2, protein: 35, carbs: 12, fats: 34, servingSize: "1 bowl" }
+  ];
+
+  const foods = selectedCategory 
+    ? popularFoods.filter(f => f.categoryId === selectedCategory) 
+    : popularFoods;
   const { data: todayData } = trpc.log.today.useQuery({ userId });
   const addItem = trpc.log.addItem.useMutation({
     onSuccess: () => {
