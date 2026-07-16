@@ -1,94 +1,94 @@
 name,hindi_name,category,serving_size,serving_size_g,calories,protein_g,carbs_g,fat_g,fiber_g,sugar_g,calcium_mg,iron_mg,vitamin_a_mcg,vitamin_c_mg,alternate_names,scan_friendly,source,image
-Basmati Rice (Steamed),उबले हुए बासमती चावल,grain,1 plate (150g),150,195,4.1,42.2,0.4,0.6,0.1,15,1.2,0,0,Chawal / Plain Rice,1,USDA,/assets/images/053_basmati_rice_steamed.webp
+Basmati Rice (Steamed),उबले हुए बासमती चावल,grain,1 plate (150g),150,195,4.1,42.2,0.4,0.6,0.1,15,1.2,0,0,Chawal / Plain Rice,1,USDA,/assets/images/001_basmati_rice_steamed.webp
 Jeera Rice,जीरा राइस,grain,1 bowl (150g),150,210,4.0,42.0,3.0,1.0,0.5,18,1.3,5,0,Cumin Rice,1,IFCT,/assets/images/032_jeera_rice.webp
-Veg Pulao,वेज पुलाव,grain,1 bowl (200g),200,280,6.0,45.0,8.0,3.0,2.0,35,1.8,45,4.5,Vegetable Pulao / Pilaf,1,IFCT,/assets/images/054_veg_pulao.webp
-Veg Biryani,वेज बिरयानी,grain,1 plate (250g),250,380,8.0,55.0,14.0,5.0,4.0,50,2.2,90,8.0,Vegetable Biryani,1,IFCT,/assets/images/034_veg_biryani.webp
-Chicken Biryani,चिकन बिरयानी,grain,1 plate (300g),300,540,28.0,62.0,18.0,4.0,3.5,60,3.5,120,6.0,Murgh Biryani,1,USDA / IFCT,/assets/images/055_chicken_biryani.webp
-Mutton Biryani,मटन बिरयानी,grain,1 plate (300g),300,620,32.0,60.0,26.0,4.0,3.0,70,4.2,80,5.0,Gosht Biryani,1,USDA / IFCT,/assets/images/056_mutton_biryani.webp
-Egg Biryani,अंडा बिरयानी,grain,1 plate (250g),250,440,16.0,52.0,14.0,3.5,2.5,55,2.8,160,4.0,Anda Biryani,1,IFCT,/assets/images/057_egg_biryani.webp
-Khichdi,खिचड़ी,grain,1 bowl (250g),250,290,9.5,48.0,6.0,4.5,1.5,45,2.1,30,2.5,Dal Khichdi / Pongal style,1,IFCT,/assets/images/058_khichdi.webp
-Curd Rice,दही चावल,grain,1 bowl (200g),200,250,7.0,38.0,7.0,1.0,3.0,180,0.6,20,1.0,Dahi Chawal / Thayir Sadam,1,IFCT,/assets/images/035_curd_rice.webp
-Lemon Rice,नींबू चावल,grain,1 bowl (150g),150,220,5.0,35.0,7.0,2.0,1.0,25,1.4,12,3.5,Chitranna / Nimmakaya Pulihora,1,IFCT,/assets/images/036_lemon_rice.webp
-Tamarind Rice,इमली चावल,grain,1 bowl (150g),150,240,4.5,42.0,6.0,2.5,2.0,30,1.8,10,1.5,Puliyogare / Pulihora,1,IFCT,/assets/images/059_tamarind_rice.webp
-Pongal,पोंगल,grain,1 bowl (200g),200,320,8.0,52.0,9.0,3.5,1.0,40,1.9,45,2.0,Ven Pongal / Huggi,1,IFCT,/assets/images/060_pongal.webp
-Chapati,चपाती,bread,1 piece (30g),30,80,3.0,16.0,0.5,2.0,0.3,12,0.9,0,0,Roti / Phulka,1,IFCT,/assets/images/003_chapati.webp
-Tandoori Roti,तंदूरी रोटी,bread,1 piece (40g),40,120,4.0,24.0,1.0,3.0,0.5,15,1.1,0,0,Clay Oven Bread,1,IFCT,/assets/images/002_tandoori_roti.webp
-Butter Naan,बटर नान,bread,1 piece (85g),85,260,7.0,38.0,9.0,2.0,2.5,40,1.5,25,0,Butter Leavened Bread,1,USDA,/assets/images/001_butter_naan.webp
-Garlic Naan,गार्लिक नान,bread,1 piece (90g),90,290,7.5,40.0,10.0,2.0,2.0,45,1.6,20,0.5,Garlic Leavened Bread,1,USDA,/assets/images/004_garlic_naan.webp
-Plain Paratha,सादा पराठा,bread,1 piece (60g),60,220,4.5,32.0,8.0,2.5,0.5,20,1.4,10,0,Parotta / Laccha Paratha,1,IFCT,/assets/images/061_plain_paratha.webp
-Aloo Paratha,आलू पराठा,bread,1 piece (100g),100,290,6.0,48.0,9.0,4.0,1.5,28,2.0,15,4.0,Potato Stuffed Flatbread,1,IFCT,/assets/images/062_aloo_paratha.webp
-Gobi Paratha,गोभी पराठा,bread,1 piece (100g),100,260,6.5,40.0,8.0,4.5,1.8,32,1.8,20,12.0,Cauliflower Stuffed Flatbread,1,IFCT,/assets/images/063_gobi_paratha.webp
-Paneer Paratha,पनीर पराठा,bread,1 piece (100g),100,310,12.0,38.0,12.0,3.0,1.5,180,1.4,60,1.5,Cottage Cheese Flatbread,1,IFCT,/assets/images/064_paneer_paratha.webp
-Bhatura,भटूरा,bread,1 piece (60g),60,210,4.0,28.0,9.0,1.0,1.0,22,1.1,0,0,Fried Leavened Bread,1,IFCT,/assets/images/065_bhatura.webp
-Puri,पूरी,bread,1 piece (25g),25,95,1.8,12.0,4.5,0.8,0.2,8,0.5,0,0,Poori,1,IFCT,/assets/images/066_puri.webp
-Rumaali Roti,रुमाली रोटी,bread,1 piece (50g),50,140,4.5,28.0,1.0,1.5,0.5,15,1.2,0,0,Handkerchief Bread,1,IFCT,/assets/images/067_rumaali_roti.webp
+Veg Pulao,वेज पुलाव,grain,1 bowl (200g),200,280,6.0,45.0,8.0,3.0,2.0,35,1.8,45,4.5,Vegetable Pulao / Pilaf,1,IFCT,/assets/images/003_veg_pulao.webp
+Veg Biryani,वेज बिरयानी,grain,1 plate (250g),250,380,8.0,55.0,14.0,5.0,4.0,50,2.2,90,8.0,Vegetable Biryani,1,IFCT,/assets/images/004_veg_biryani.webp
+Chicken Biryani,चिकन बिरयानी,grain,1 plate (300g),300,540,28.0,62.0,18.0,4.0,3.5,60,3.5,120,6.0,Murgh Biryani,1,USDA / IFCT,/assets/images/005_chicken_biryani.webp
+Mutton Biryani,मटन बिरयानी,grain,1 plate (300g),300,620,32.0,60.0,26.0,4.0,3.0,70,4.2,80,5.0,Gosht Biryani,1,USDA / IFCT,/assets/images/006_mutton_biryani.webp
+Egg Biryani,अंडा बिरयानी,grain,1 plate (250g),250,440,16.0,52.0,14.0,3.5,2.5,55,2.8,160,4.0,Anda Biryani,1,IFCT,/assets/images/007_egg_biryani.webp
+Khichdi,खिचड़ी,grain,1 bowl (250g),250,290,9.5,48.0,6.0,4.5,1.5,45,2.1,30,2.5,Dal Khichdi / Pongal style,1,IFCT,/assets/images/008_khichdi.webp
+Curd Rice,दही चावल,grain,1 bowl (200g),200,250,7.0,38.0,7.0,1.0,3.0,180,0.6,20,1.0,Dahi Chawal / Thayir Sadam,1,IFCT,/assets/images/009_curd_rice.webp
+Lemon Rice,नींबू चावल,grain,1 bowl (150g),150,220,5.0,35.0,7.0,2.0,1.0,25,1.4,12,3.5,Chitranna / Nimmakaya Pulihora,1,IFCT,/assets/images/010_lemon_rice.webp
+Tamarind Rice,इमली चावल,grain,1 bowl (150g),150,240,4.5,42.0,6.0,2.5,2.0,30,1.8,10,1.5,Puliyogare / Pulihora,1,IFCT,/assets/images/011_tamarind_rice.webp
+Pongal,पोंगल,grain,1 bowl (200g),200,320,8.0,52.0,9.0,3.5,1.0,40,1.9,45,2.0,Ven Pongal / Huggi,1,IFCT,/assets/images/012_pongal.webp
+Chapati,चपाती,bread,1 piece (30g),30,80,3.0,16.0,0.5,2.0,0.3,12,0.9,0,0,Roti / Phulka,1,IFCT,/assets/images/024_chapati.webp
+Tandoori Roti,तंदूरी रोटी,bread,1 piece (40g),40,120,4.0,24.0,1.0,3.0,0.5,15,1.1,0,0,Clay Oven Bread,1,IFCT,/assets/images/025_tandoori_roti.webp
+Butter Naan,बटर नान,bread,1 piece (85g),85,260,7.0,38.0,9.0,2.0,2.5,40,1.5,25,0,Butter Leavened Bread,1,USDA,/assets/images/026_butter_naan.webp
+Garlic Naan,गार्लिक नान,bread,1 piece (90g),90,290,7.5,40.0,10.0,2.0,2.0,45,1.6,20,0.5,Garlic Leavened Bread,1,USDA,/assets/images/027_garlic_naan.webp
+Plain Paratha,सादा पराठा,bread,1 piece (60g),60,220,4.5,32.0,8.0,2.5,0.5,20,1.4,10,0,Parotta / Laccha Paratha,1,IFCT,/assets/images/028_plain_paratha.webp
+Aloo Paratha,आलू पराठा,bread,1 piece (100g),100,290,6.0,48.0,9.0,4.0,1.5,28,2.0,15,4.0,Potato Stuffed Flatbread,1,IFCT,/assets/images/029_aloo_paratha.webp
+Gobi Paratha,गोभी पराठा,bread,1 piece (100g),100,260,6.5,40.0,8.0,4.5,1.8,32,1.8,20,12.0,Cauliflower Stuffed Flatbread,1,IFCT,/assets/images/030_gobi_paratha.webp
+Paneer Paratha,पनीर पराठा,bread,1 piece (100g),100,310,12.0,38.0,12.0,3.0,1.5,180,1.4,60,1.5,Cottage Cheese Flatbread,1,IFCT,/assets/images/031_paneer_paratha.webp
+Bhatura,भटूरा,bread,1 piece (60g),60,210,4.0,28.0,9.0,1.0,1.0,22,1.1,0,0,Fried Leavened Bread,1,IFCT,/assets/images/033_bhatura.webp
+Puri,पूरी,bread,1 piece (25g),25,95,1.8,12.0,4.5,0.8,0.2,8,0.5,0,0,Poori,1,IFCT,/assets/images/083_sev_puri.webp
+Rumaali Roti,रुमाली रोटी,bread,1 piece (50g),50,140,4.5,28.0,1.0,1.5,0.5,15,1.2,0,0,Handkerchief Bread,1,IFCT,/assets/images/035_rumaali_roti.webp
 Missi Roti,मिस्सी रोटी,bread,1 piece (50g),50,160,6.5,26.0,3.0,3.5,1.0,35,1.8,25,0.8,Gram Flour Flatbread,1,IFCT,/assets/images/068_missi_roti.webp
-Yellow Dal Tadka,दाल तड़का,legume,1 bowl (200g),200,180,10.0,25.0,5.0,6.0,2.0,30,2.5,15,1.2,Toor Dal / Peeli Dal,1,IFCT,/assets/images/022_yellow_dal_tadka.webp
+Yellow Dal Tadka,दाल तड़का,legume,1 bowl (200g),200,180,10.0,25.0,5.0,6.0,2.0,30,2.5,15,1.2,Toor Dal / Peeli Dal,1,IFCT,/assets/images/037_yellow_dal_tadka.webp
 Dal Makhani,दाल मखनी,legume,1 bowl (200g),200,320,14.0,30.0,16.0,8.0,3.0,95,3.0,120,2.0,Makhani Dal / Black Lentils,1,IFCT / USDA,/assets/images/021_dal_makhani.webp
 Chole Masala,छोले मसाला,legume,1 bowl (200g),200,280,12.0,38.0,9.0,10.0,4.0,65,3.8,30,4.5,Chana Masala / Chickpea Curry,1,USDA / IFCT,/assets/images/023_chole_masala.webp
-Rajma Masala,राजमा मसाला,legume,1 bowl (200g),200,260,13.0,35.0,8.0,11.0,3.0,80,3.2,40,3.0,Kidney Bean Curry,1,USDA / IFCT,/assets/images/024_rajma_masala.webp
-Masoor Dal,मसूर दाल,legume,1 bowl (200g),200,160,11.0,24.0,3.0,5.5,1.5,25,2.8,10,1.0,Red Lentil Curry,1,IFCT,/assets/images/069_masoor_dal.webp
-Sambhar,सांभर,legume,1 bowl (200g),200,130,6.0,20.0,3.0,5.0,3.0,42,1.6,180,9.0,Sambar / South Indian Lentil Stew,1,IFCT,/assets/images/070_sambhar.webp
-Rasam,रसम,legume,1 bowl (150g),150,60,1.5,9.0,2.0,1.0,1.5,20,1.0,45,6.0,Clear Lentil Soup / Saaru,0,IFCT,/assets/images/071_rasam.webp
-Kadhi Pakora,कढ़ी पकोड़ा,legume,1 bowl (200g),200,240,10.0,24.0,12.0,3.0,5.0,150,1.8,60,3.0,Kadhi Pakodi / Dahi Kadhi,1,IFCT,/assets/images/031_kadhi_pakora.webp
-Lobia Curry,लोबिया करी,legume,1 bowl (200g),200,220,12.0,32.0,5.0,8.0,2.0,70,3.4,30,2.5,Black Eyed Peas Curry,1,IFCT,/assets/images/072_lobia_curry.webp
-Moong Dal Khichdi,मूंंग दाल खिचड़ी,legume,1 bowl (250g),250,270,10.0,46.0,5.0,5.0,1.0,40,2.2,25,2.0,Moong Dal Khichri,1,IFCT,/assets/images/073_moong_dal_khichdi.webp
-Aloo Gobi,आलू गोभी,vegetable,1 bowl (150g),150,180,4.0,22.0,9.0,5.0,3.0,35,1.5,45,35.0,Potato Cauliflower Dry Curry,1,IFCT,/assets/images/015_aloo_gobi.webp
-Bhindi Masala,भिंडी मसाला,vegetable,1 bowl (150g),150,150,3.5,18.0,7.0,6.0,4.0,110,1.6,60,18.0,Stir-fried Okra,1,IFCT,/assets/images/016_bhindi_masala.webp
-Baingan Bharta,बैंगन भरता,vegetable,1 bowl (150g),150,130,3.0,14.0,7.0,5.0,4.0,40,1.2,30,8.0,Roasted Eggplant Mash,1,IFCT,/assets/images/018_baingan_bharta.webp
-Mixed Veg Sabzi,मिक्स सब्जी,vegetable,1 bowl (150g),150,140,4.0,16.0,6.0,5.0,5.0,45,1.8,220,15.0,Mixed Vegetable Curry,1,IFCT,/assets/images/074_mixed_veg_sabzi.webp
-Aloo Matar,आलू मटर,vegetable,1 bowl (150g),150,170,4.5,24.0,6.5,4.5,4.0,28,1.4,35,12.0,Potato Peas Curry,1,IFCT,/assets/images/075_aloo_matar.webp
-Gobi Matar Masala,गोभी मटर मसाला,vegetable,1 bowl (150g),150,160,5.0,20.0,7.0,5.0,4.5,35,1.6,40,28.0,Cauliflower Peas Curry,1,IFCT,/assets/images/076_gobi_matar_masala.webp
-Dum Aloo,दम आलू,vegetable,1 bowl (180g),180,240,4.0,32.0,11.0,4.0,3.5,30,1.8,25,6.0,Spicy Potato Curry,1,IFCT,/assets/images/077_dum_aloo.webp
-Mango Lassi,मैंगो लस्सी,beverage,1 glass (250ml),250,180,6.0,28.0,5.0,1.0,24.0,160,0.4,120,6.0,Yogurt Mango Shake,1,USDA / IFCT,/assets/images/043_mango_lassi.webp
-Avial,अवियल,vegetable,1 bowl (150g),150,160,3.5,12.0,11.0,4.0,2.5,80,1.2,280,8.0,Kerala Mixed Veg Stew,1,IFCT,/assets/images/078_avial.webp
-Lauki Ki Sabzi,लौकी की सब्जी,vegetable,1 bowl (150g),150,80,1.5,10.0,4.0,3.0,3.0,30,0.9,15,9.0,Ghiya Sabzi / Bottle Gourd Curry,1,IFCT,/assets/images/079_lauki_ki_sabzi.webp
-Paneer Butter Masala,पनीर बटर मसाला,dairy,1 bowl (200g),200,380,16.0,14.0,28.0,2.0,6.0,380,1.0,180,5.0,Paneer Makhani,1,IFCT,/assets/images/028_paneer_butter_masala.webp
-Palak Paneer,पालक पनीर,dairy,1 bowl (200g),200,310,18.0,12.0,22.0,4.0,3.0,420,3.2,380,18.0,Spinach Cottage Cheese Curry,1,IFCT,/assets/images/027_palak_paneer.webp
-Kadai Paneer,कढ़ाई पनीर,dairy,1 bowl (200g),200,340,17.0,13.0,25.0,3.0,4.0,360,1.1,140,12.0,Bell Pepper Paneer Curry,1,IFCT,/assets/images/080_kadai_paneer.webp
-Shahi Paneer,शाही पनीर,dairy,1 bowl (200g),200,350,16.0,12.0,26.0,1.5,5.0,350,0.9,160,4.0,Royal Creamy Paneer Curry,1,IFCT,/assets/images/030_shahi_paneer.webp
-Paneer Bhurji,पनीर भुर्जी,dairy,1 bowl (150g),150,320,22.0,8.0,24.0,1.5,3.0,410,1.2,120,6.0,Scrambled Cottage Cheese,1,IFCT,/assets/images/013_paneer_bhurji.webp
-Matar Paneer,मटर पनीर,dairy,1 bowl (200g),200,290,15.0,18.0,18.0,4.0,5.0,320,1.5,110,14.0,Peas Cottage Cheese Curry,1,IFCT,/assets/images/081_matar_paneer.webp
-Malai Kofta,मलाई कोफ्ता,dairy,1 plate (200g),200,420,10.0,22.0,32.0,2.5,7.0,220,1.4,150,3.0,Paneer Potato Dumplings in Creamy Gravy,1,IFCT / USDA,/assets/images/082_malai_kofta.webp
-Raita,रायता,dairy,1 bowl (100g),100,80,4.0,6.0,4.0,0.5,4.0,120,0.2,25,1.5,Cucumber Yogurt Dip,1,IFCT,/assets/images/029_raita.webp
+Rajma Masala,राजमा मसाला,legume,1 bowl (200g),200,260,13.0,35.0,8.0,11.0,3.0,80,3.2,40,3.0,Kidney Bean Curry,1,USDA / IFCT,/assets/images/040_rajma_masala.webp
+Masoor Dal,मसूर दाल,legume,1 bowl (200g),200,160,11.0,24.0,3.0,5.5,1.5,25,2.8,10,1.0,Red Lentil Curry,1,IFCT,/assets/images/041_masoor_dal.webp
+Sambhar,सांभर,legume,1 bowl (200g),200,130,6.0,20.0,3.0,5.0,3.0,42,1.6,180,9.0,Sambar / South Indian Lentil Stew,1,IFCT,/assets/images/042_sambhar.webp
+Rasam,रसम,legume,1 bowl (150g),150,60,1.5,9.0,2.0,1.0,1.5,20,1.0,45,6.0,Clear Lentil Soup / Saaru,0,IFCT,/assets/images/043_rasam.webp
+Kadhi Pakora,कढ़ी पकोड़ा,legume,1 bowl (200g),200,240,10.0,24.0,12.0,3.0,5.0,150,1.8,60,3.0,Kadhi Pakodi / Dahi Kadhi,1,IFCT,/assets/images/044_kadhi_pakora.webp
+Lobia Curry,लोबिया करी,legume,1 bowl (200g),200,220,12.0,32.0,5.0,8.0,2.0,70,3.4,30,2.5,Black Eyed Peas Curry,1,IFCT,/assets/images/045_lobia_curry.webp
+Moong Dal Khichdi,मूंंग दाल खिचड़ी,legume,1 bowl (250g),250,270,10.0,46.0,5.0,5.0,1.0,40,2.2,25,2.0,Moong Dal Khichri,1,IFCT,/assets/images/046_moong_dal_khichdi.webp
+Aloo Gobi,आलू गोभी,vegetable,1 bowl (150g),150,180,4.0,22.0,9.0,5.0,3.0,35,1.5,45,35.0,Potato Cauliflower Dry Curry,1,IFCT,/assets/images/048_aloo_gobi.webp
+Bhindi Masala,भिंडी मसाला,vegetable,1 bowl (150g),150,150,3.5,18.0,7.0,6.0,4.0,110,1.6,60,18.0,Stir-fried Okra,1,IFCT,/assets/images/049_bhindi_masala.webp
+Baingan Bharta,बैंगन भरता,vegetable,1 bowl (150g),150,130,3.0,14.0,7.0,5.0,4.0,40,1.2,30,8.0,Roasted Eggplant Mash,1,IFCT,/assets/images/050_baingan_bharta.webp
+Mixed Veg Sabzi,मिक्स सब्जी,vegetable,1 bowl (150g),150,140,4.0,16.0,6.0,5.0,5.0,45,1.8,220,15.0,Mixed Vegetable Curry,1,IFCT,/assets/images/051_mixed_veg_sabzi.webp
+Aloo Matar,आलू मटर,vegetable,1 bowl (150g),150,170,4.5,24.0,6.5,4.5,4.0,28,1.4,35,12.0,Potato Peas Curry,1,IFCT,/assets/images/052_aloo_matar.webp
+Gobi Matar Masala,गोभी मटर मसाला,vegetable,1 bowl (150g),150,160,5.0,20.0,7.0,5.0,4.5,35,1.6,40,28.0,Cauliflower Peas Curry,1,IFCT,/assets/images/053_gobi_matar_masala.webp
+Dum Aloo,दम आलू,vegetable,1 bowl (180g),180,240,4.0,32.0,11.0,4.0,3.5,30,1.8,25,6.0,Spicy Potato Curry,1,IFCT,/assets/images/054_dum_aloo.webp
+Mango Lassi,मैंगो लस्सी,beverage,1 glass (250ml),250,180,6.0,28.0,5.0,1.0,24.0,160,0.4,120,6.0,Yogurt Mango Shake,1,USDA / IFCT,/assets/images/079_mango_lassi.webp
+Avial,अवियल,vegetable,1 bowl (150g),150,160,3.5,12.0,11.0,4.0,2.5,80,1.2,280,8.0,Kerala Mixed Veg Stew,1,IFCT,/assets/images/055_avial.webp
+Lauki Ki Sabzi,लौकी की सब्जी,vegetable,1 bowl (150g),150,80,1.5,10.0,4.0,3.0,3.0,30,0.9,15,9.0,Ghiya Sabzi / Bottle Gourd Curry,1,IFCT,/assets/images/056_lauki_ki_sabzi.webp
+Paneer Butter Masala,पनीर बटर मसाला,dairy,1 bowl (200g),200,380,16.0,14.0,28.0,2.0,6.0,380,1.0,180,5.0,Paneer Makhani,1,IFCT,/assets/images/057_paneer_butter_masala.webp
+Palak Paneer,पालक पनीर,dairy,1 bowl (200g),200,310,18.0,12.0,22.0,4.0,3.0,420,3.2,380,18.0,Spinach Cottage Cheese Curry,1,IFCT,/assets/images/058_palak_paneer.webp
+Kadai Paneer,कढ़ाई पनीर,dairy,1 bowl (200g),200,340,17.0,13.0,25.0,3.0,4.0,360,1.1,140,12.0,Bell Pepper Paneer Curry,1,IFCT,/assets/images/059_kadai_paneer.webp
+Shahi Paneer,शाही पनीर,dairy,1 bowl (200g),200,350,16.0,12.0,26.0,1.5,5.0,350,0.9,160,4.0,Royal Creamy Paneer Curry,1,IFCT,/assets/images/060_shahi_paneer.webp
+Paneer Bhurji,पनीर भुर्जी,dairy,1 bowl (150g),150,320,22.0,8.0,24.0,1.5,3.0,410,1.2,120,6.0,Scrambled Cottage Cheese,1,IFCT,/assets/images/061_paneer_bhurji.webp
+Matar Paneer,मटर पनीर,dairy,1 bowl (200g),200,290,15.0,18.0,18.0,4.0,5.0,320,1.5,110,14.0,Peas Cottage Cheese Curry,1,IFCT,/assets/images/062_matar_paneer.webp
+Malai Kofta,मलाई कोफ्ता,dairy,1 plate (200g),200,420,10.0,22.0,32.0,2.5,7.0,220,1.4,150,3.0,Paneer Potato Dumplings in Creamy Gravy,1,IFCT / USDA,/assets/images/063_malai_kofta.webp
+Raita,रायता,dairy,1 bowl (100g),100,80,4.0,6.0,4.0,0.5,4.0,120,0.2,25,1.5,Cucumber Yogurt Dip,1,IFCT,/assets/images/064_raita.webp
 Paneer Tikka,पनीर टिक्का,dairy,6 pieces (120g),120,280,18.0,8.0,20.0,1.0,2.0,350,0.8,150,4.0,Grilled Cottage Cheese Cubes,1,IFCT,/assets/images/008_paneer_tikka.webp
 Butter Chicken,बटर चिकन,meat,1 bowl (200g),200,490,35.0,12.0,34.0,2.0,5.0,80,2.1,180,3.5,Murgh Makhani,1,USDA / IFCT,/assets/images/009_butter_chicken.webp
-Chicken Tikka Masala,चिकन टिक्का मसाला,meat,1 bowl (200g),200,420,32.0,10.0,28.0,2.0,4.0,60,2.0,140,3.0,Grilled Chicken in Creamy Tomato Gravy,1,USDA,/assets/images/010_chicken_tikka_masala.webp
-Chicken Curry,चिकन करी,meat,1 bowl (200g),200,320,28.0,8.0,20.0,2.0,2.0,40,1.9,80,2.5,Murgh Kari / Chicken Gravy,1,USDA / IFCT,/assets/images/083_chicken_curry.webp
-Mutton Curry,मटन करी,meat,1 bowl (200g),200,380,30.0,6.0,26.0,1.5,1.5,45,3.8,40,2.0,Mutton Rogan Josh / Goat Curry,1,USDA / IFCT,/assets/images/084_mutton_curry.webp
-Goan Fish Curry,गोअन फिश करी,meat,1 bowl (180g),180,310,28.0,6.0,18.0,1.0,1.5,50,1.8,60,4.0,Fish Curry / Machhi Curry,1,IFCT,/assets/images/085_goan_fish_curry.webp
-Egg Curry,अंडा करी,meat,2 eggs + gravy (200g),200,290,18.0,10.0,20.0,2.0,3.0,90,3.1,190,2.5,Anda Curry,1,IFCT,/assets/images/014_egg_curry.webp
-Egg Bhurji,अंडा भुर्जी,meat,2 eggs scrambled (120g),120,220,14.0,4.0,16.0,0.5,1.5,70,2.4,180,4.0,Scrambled Eggs Indian Style,1,IFCT,/assets/images/086_egg_bhurji.webp
-Chicken Seekh Kebab,चिकन सीख कबाब,meat,2 skewers (100g),100,180,22.0,3.0,9.0,0.5,0.5,25,1.6,40,2.0,Chicken Kebab,1,USDA,/assets/images/087_chicken_seekh_kebab.webp
-Tandoori Chicken,तंदूरी चिकन,meat,2 pieces (150g),150,280,35.0,4.0,13.0,0.5,1.0,40,2.2,90,3.0,Roasted Marinated Chicken,1,USDA / IFCT,/assets/images/012_tandoori_chicken.webp
-Fish Fry,फिश फ्राई,meat,1 piece (100g),100,220,20.0,8.0,12.0,1.0,0.5,35,1.4,30,1.0,Fried Fish,1,IFCT,/assets/images/088_fish_fry.webp
-Idli,इडली,grain,2 pieces (80g),80,100,3.5,20.0,0.5,1.5,0.3,18,0.8,0,0,Steamed Rice Cakes,1,IFCT,/assets/images/007_idli.webp
-Plain Dosa,सादा डोसा,grain,1 dosa (60g),60,130,3.0,25.0,2.0,1.5,0.5,22,0.9,0,0,Sada Dosa,1,IFCT,/assets/images/006_plain_dosa.webp
-Masala Dosa,मसाला डोसा,grain,1 dosa (150g),150,290,5.5,48.0,8.0,3.5,1.5,45,2.1,20,8.0,Potato Filled Crepe,1,IFCT,/assets/images/089_masala_dosa.webp
-Rava Dosa,रवा डोसा,grain,1 dosa (80g),80,180,4.0,32.0,4.0,2.0,0.5,25,1.2,10,1.0,Semolina Crepe,1,IFCT,/assets/images/090_rava_dosa.webp
-Medu Vada,मेदु वड़ा,legume,2 pieces (80g),80,240,6.0,28.0,12.0,3.0,0.5,28,1.6,5,0.5,Urad Dal Vada / Lentil Donut,1,IFCT,/assets/images/091_medu_vada.webp
+Chicken Tikka Masala,चिकन टिक्का मसाला,meat,1 bowl (200g),200,420,32.0,10.0,28.0,2.0,4.0,60,2.0,140,3.0,Grilled Chicken in Creamy Tomato Gravy,1,USDA,/assets/images/067_chicken_tikka_masala.webp
+Chicken Curry,चिकन करी,meat,1 bowl (200g),200,320,28.0,8.0,20.0,2.0,2.0,40,1.9,80,2.5,Murgh Kari / Chicken Gravy,1,USDA / IFCT,/assets/images/068_chicken_curry.webp
+Mutton Curry,मटन करी,meat,1 bowl (200g),200,380,30.0,6.0,26.0,1.5,1.5,45,3.8,40,2.0,Mutton Rogan Josh / Goat Curry,1,USDA / IFCT,/assets/images/069_mutton_curry.webp
+Goan Fish Curry,गोअन फिश करी,meat,1 bowl (180g),180,310,28.0,6.0,18.0,1.0,1.5,50,1.8,60,4.0,Fish Curry / Machhi Curry,1,IFCT,/assets/images/070_goan_fish_curry.webp
+Egg Curry,अंडा करी,meat,2 eggs + gravy (200g),200,290,18.0,10.0,20.0,2.0,3.0,90,3.1,190,2.5,Anda Curry,1,IFCT,/assets/images/071_egg_curry.webp
+Egg Bhurji,अंडा भुर्जी,meat,2 eggs scrambled (120g),120,220,14.0,4.0,16.0,0.5,1.5,70,2.4,180,4.0,Scrambled Eggs Indian Style,1,IFCT,/assets/images/072_egg_bhurji.webp
+Chicken Seekh Kebab,चिकन सीख कबाब,meat,2 skewers (100g),100,180,22.0,3.0,9.0,0.5,0.5,25,1.6,40,2.0,Chicken Kebab,1,USDA,/assets/images/073_chicken_seekh_kebab.webp
+Tandoori Chicken,तंदूरी चिकन,meat,2 pieces (150g),150,280,35.0,4.0,13.0,0.5,1.0,40,2.2,90,3.0,Roasted Marinated Chicken,1,USDA / IFCT,/assets/images/074_tandoori_chicken.webp
+Fish Fry,फिश फ्राई,meat,1 piece (100g),100,220,20.0,8.0,12.0,1.0,0.5,35,1.4,30,1.0,Fried Fish,1,IFCT,/assets/images/075_fish_fry.webp
+Idli,इडली,grain,2 pieces (80g),80,100,3.5,20.0,0.5,1.5,0.3,18,0.8,0,0,Steamed Rice Cakes,1,IFCT,/assets/images/013_idli.webp
+Plain Dosa,सादा डोसा,grain,1 dosa (60g),60,130,3.0,25.0,2.0,1.5,0.5,22,0.9,0,0,Sada Dosa,1,IFCT,/assets/images/014_plain_dosa.webp
+Masala Dosa,मसाला डोसा,grain,1 dosa (150g),150,290,5.5,48.0,8.0,3.5,1.5,45,2.1,20,8.0,Potato Filled Crepe,1,IFCT,/assets/images/015_masala_dosa.webp
+Rava Dosa,रवा डोसा,grain,1 dosa (80g),80,180,4.0,32.0,4.0,2.0,0.5,25,1.2,10,1.0,Semolina Crepe,1,IFCT,/assets/images/016_rava_dosa.webp
+Medu Vada,मेदु वड़ा,legume,2 pieces (80g),80,240,6.0,28.0,12.0,3.0,0.5,28,1.6,5,0.5,Urad Dal Vada / Lentil Donut,1,IFCT,/assets/images/047_medu_vada.webp
 Uttapam,उत्तापम,grain,1 piece (120g),120,210,5.0,38.0,4.0,2.5,2.0,32,1.4,25,6.0,Oothapam / Rice Pancake,1,IFCT,/assets/images/092_uttapam.webp
 Upma,उपमा,grain,1 bowl (150g),150,220,5.0,38.0,5.0,2.5,2.0,28,1.3,45,3.0,Rava Upma / Semolina Porridge,1,IFCT,/assets/images/093_upma.webp
-Poha,पोहा,grain,1 plate (150g),150,250,5.0,45.0,5.0,2.0,2.5,30,3.5,40,12.0,Flattened Rice / Rice Flakes Poha,1,IFCT,/assets/images/094_poha.webp
-Puri Bhaji,पूरी भाजी,grain,2 puris + potato (180g),180,390,7.0,50.0,18.0,4.5,2.0,45,2.4,30,12.0,Poori Bhaji / Poori Masala,1,IFCT,/assets/images/095_puri_bhaji.webp
-Bread Omelette,ब्रेड आमलेट,meat,1 sandwich (150g),150,340,16.0,28.0,18.0,2.0,2.0,90,2.8,160,4.0,Bread Egg Toast,1,IFCT / USDA,/assets/images/096_bread_omelette.webp
-Rava Idli,रवा इडली,grain,2 pieces (100g),100,160,5.0,32.0,1.5,2.0,0.5,30,1.4,30,2.0,Semolina Idli,1,IFCT,/assets/images/097_rava_idli.webp
-Appam,अप्पम,grain,2 pieces (80g),80,120,2.5,24.0,1.5,1.0,1.5,15,0.6,0,0,Palappam / Rice Crepe,1,IFCT,/assets/images/098_appam.webp
-Sabudana Khichdi,साबूदाना खिचड़ी,grain,1 plate (150g),150,310,3.0,62.0,6.0,1.5,1.0,15,1.2,10,4.0,Sago Khichdi,1,IFCT,/assets/images/099_sabudana_khichdi.webp
-Samosa,समोसा,snack,2 pieces (100g),100,310,5.0,36.0,16.0,3.0,2.0,20,1.6,10,4.0,Potato Pastry Snack,1,USDA / IFCT,/assets/images/038_samosa.webp
-Onion Pakora,प्याज पकोड़ा,snack,4 pieces (80g),80,220,5.0,22.0,12.0,4.0,3.0,40,1.8,25,3.0,Onion Fritters / Pyazi Pakoda,1,IFCT,/assets/images/100_onion_pakora.webp
-Aloo Tikki,आलू टिक्की,snack,2 tikkis (80g),80,180,3.0,28.0,6.0,2.5,1.0,15,1.2,15,5.0,Potato Cutlets,1,IFCT,/assets/images/101_aloo_tikki.webp
-Pani Puri,पानी पूरी,snack,6 pieces (120g),120,180,3.0,32.0,4.0,2.5,3.0,30,1.6,15,6.0,Golgappa / Puchka,1,IFCT,/assets/images/102_pani_puri.webp
-Bhel Puri,भेल पूरी,snack,1 plate (100g),100,190,4.0,35.0,3.5,3.0,4.0,35,2.1,30,5.0,Bhelpuri / Puffed Rice Salad,1,IFCT,/assets/images/103_bhel_puri.webp
-Sev Puri,सेव पूरी,snack,6 pieces (120g),120,290,6.0,42.0,11.0,3.5,4.0,45,2.4,35,8.0,Sevpuri / Flat Puri Chaat,1,IFCT,/assets/images/104_sev_puri.webp
-Dahi Vada,दही वड़ा,snack,2 pieces (150g),150,260,8.0,34.0,10.0,3.5,8.0,160,2.0,45,3.0,Dahi Bhalla / Lentil Dumplings in Yogurt,1,IFCT,/assets/images/105_dahi_vada.webp
+Poha,पोहा,grain,1 plate (150g),150,250,5.0,45.0,5.0,2.0,2.5,30,3.5,40,12.0,Flattened Rice / Rice Flakes Poha,1,IFCT,/assets/images/019_poha.webp
+Puri Bhaji,पूरी भाजी,grain,2 puris + potato (180g),180,390,7.0,50.0,18.0,4.5,2.0,45,2.4,30,12.0,Poori Bhaji / Poori Masala,1,IFCT,/assets/images/020_puri_bhaji.webp
+Bread Omelette,ब्रेड आमलेट,meat,1 sandwich (150g),150,340,16.0,28.0,18.0,2.0,2.0,90,2.8,160,4.0,Bread Egg Toast,1,IFCT / USDA,/assets/images/076_bread_omelette.webp
+Rava Idli,रवा इडली,grain,2 pieces (100g),100,160,5.0,32.0,1.5,2.0,0.5,30,1.4,30,2.0,Semolina Idli,1,IFCT,/assets/images/021_rava_idli.webp
+Appam,अप्पम,grain,2 pieces (80g),80,120,2.5,24.0,1.5,1.0,1.5,15,0.6,0,0,Palappam / Rice Crepe,1,IFCT,/assets/images/022_appam.webp
+Sabudana Khichdi,साबूदाना खिचड़ी,grain,1 plate (150g),150,310,3.0,62.0,6.0,1.5,1.0,15,1.2,10,4.0,Sago Khichdi,1,IFCT,/assets/images/023_sabudana_khichdi.webp
+Samosa,समोसा,snack,2 pieces (100g),100,310,5.0,36.0,16.0,3.0,2.0,20,1.6,10,4.0,Potato Pastry Snack,1,USDA / IFCT,/assets/images/077_samosa.webp
+Onion Pakora,प्याज पकोड़ा,snack,4 pieces (80g),80,220,5.0,22.0,12.0,4.0,3.0,40,1.8,25,3.0,Onion Fritters / Pyazi Pakoda,1,IFCT,/assets/images/078_onion_pakora.webp
+Aloo Tikki,आलू टिक्की,snack,2 tikkis (80g),80,180,3.0,28.0,6.0,2.5,1.0,15,1.2,15,5.0,Potato Cutlets,1,IFCT,/assets/images/080_aloo_tikki.webp
+Pani Puri,पानी पूरी,snack,6 pieces (120g),120,180,3.0,32.0,4.0,2.5,3.0,30,1.6,15,6.0,Golgappa / Puchka,1,IFCT,/assets/images/081_pani_puri.webp
+Bhel Puri,भेल पूरी,snack,1 plate (100g),100,190,4.0,35.0,3.5,3.0,4.0,35,2.1,30,5.0,Bhelpuri / Puffed Rice Salad,1,IFCT,/assets/images/082_bhel_puri.webp
+Sev Puri,सेव पूरी,snack,6 pieces (120g),120,290,6.0,42.0,11.0,3.5,4.0,45,2.4,35,8.0,Sevpuri / Flat Puri Chaat,1,IFCT,/assets/images/083_sev_puri.webp
+Dahi Vada,दही वड़ा,snack,2 pieces (150g),150,260,8.0,34.0,10.0,3.5,8.0,160,2.0,45,3.0,Dahi Bhalla / Lentil Dumplings in Yogurt,1,IFCT,/assets/images/084_dahi_vada.webp
 Pav Bhaji,पाव भाजी,snack,1 plate (250g),250,420,10.0,62.0,14.0,6.5,8.0,90,3.5,180,22.0,Pavbhaji / Spicy Vegetable Mash with Buns,1,IFCT,/assets/images/106_pav_bhaji.webp
-Vada Pav,वड़ा पाव,snack,1 piece (120g),120,300,7.0,45.0,10.0,3.5,3.0,45,2.2,20,5.0,Bombay Burger / Potato Dumpling Burger,1,IFCT,/assets/images/107_vada_pav.webp
-Dhokla,ढोकला,snack,2 pieces (80g),80,130,5.0,22.0,2.5,2.5,3.0,35,1.4,20,2.0,Khaman Dhokla / Steamed Chickpea Cake,1,IFCT,/assets/images/108_dhokla.webp
-Masala Chai,मसाला चाय,beverage,1 cup (200ml),200,120,4.0,14.0,5.0,0.5,10.0,130,0.3,40,1.0,Spiced Milk Tea,1,IFCT,/assets/images/044_masala_chai.webp
-Kachori,कचौरी,snack,1 piece (80g),80,290,6.0,36.0,14.0,3.0,1.5,25,1.6,10,1.0,Khasta Kachori / Pyaaz Kachori,1,IFCT,/assets/images/109_kachori.webp
-Papdi Chaat,पापड़ी चाट,snack,1 plate (150g),150,320,6.0,48.0,12.0,3.5,10.0,110,2.4,50,6.0,Papri Chaat / Indian Nachos Chaat,1,IFCT,/assets/images/110_papdi_chaat.webp
-Gulab Jamun,गुलाब जामुन,sweet,2 pieces (60g),60,280,4.0,42.0,11.0,0.5,35.0,110,0.5,45,0.5,Fried Milk Dumplings in Syrup,1,IFCT,/assets/images/048_gulab_jamun.webp
+Vada Pav,वड़ा पाव,snack,1 piece (120g),120,300,7.0,45.0,10.0,3.5,3.0,45,2.2,20,5.0,Bombay Burger / Potato Dumpling Burger,1,IFCT,/assets/images/086_vada_pav.webp
+Dhokla,ढोकला,snack,2 pieces (80g),80,130,5.0,22.0,2.5,2.5,3.0,35,1.4,20,2.0,Khaman Dhokla / Steamed Chickpea Cake,1,IFCT,/assets/images/087_dhokla.webp
+Masala Chai,मसाला चाय,beverage,1 cup (200ml),200,120,4.0,14.0,5.0,0.5,10.0,130,0.3,40,1.0,Spiced Milk Tea,1,IFCT,/assets/images/088_masala_chai.webp
+Kachori,कचौरी,snack,1 piece (80g),80,290,6.0,36.0,14.0,3.0,1.5,25,1.6,10,1.0,Khasta Kachori / Pyaaz Kachori,1,IFCT,/assets/images/089_kachori.webp
+Papdi Chaat,पापड़ी चाट,snack,1 plate (150g),150,320,6.0,48.0,12.0,3.5,10.0,110,2.4,50,6.0,Papri Chaat / Indian Nachos Chaat,1,IFCT,/assets/images/090_papdi_chaat.webp
+Gulab Jamun,गुलाब जामुन,sweet,2 pieces (60g),60,280,4.0,42.0,11.0,0.5,35.0,110,0.5,45,0.5,Fried Milk Dumplings in Syrup,1,IFCT,/assets/images/091_gulab_jamun.webp
 Rasgulla,रसगुल्ला,sweet,2 pieces (80g),80,160,5.0,28.0,3.0,0.0,24.0,120,0.3,30,0.2,Roshogolla / Syrupy Cheese Balls,1,IFCT,/assets/images/049_rasgulla.webp
 Rice Kheer,चावल की खीर,sweet,1 bowl (150g),150,220,6.0,30.0,8.0,0.5,22.0,180,0.4,85,1.0,Payasam / Rice Pudding,1,IFCT,/assets/images/111_rice_kheer.webp
 Gajar Ka Halwa,गाजर का हलवा,sweet,1 bowl (120g),120,290,4.5,38.0,13.0,2.5,28.0,120,1.2,420,4.5,Carrot Halwa / Gajrela,1,IFCT,/assets/images/112_gajar_ka_halwa.webp
