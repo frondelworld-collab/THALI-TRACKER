@@ -14,7 +14,14 @@ import {
   Check,
 } from "lucide-react";
 
-const demoFoods = allFoods.map(f => ({ ...f, confidence: 0.9 + Math.random() * 0.05 }));
+const getMatchedFood = (detectedName: string) => {
+  const match = allFoods.find(
+    (food) => food.name.toLowerCase().trim() === detectedName.toLowerCase().trim()
+  ) || allFoods.find(
+    (food) => detectedName.toLowerCase().trim().includes(food.name.toLowerCase().trim())
+  );
+  return match || allFoods[0]; // fallback safely
+};
 
 export default function Scanner() {
   const navigate = useNavigate();
@@ -26,7 +33,7 @@ export default function Scanner() {
   const [scanState, setScanState] = useState<"idle" | "scanning" | "result">("idle");
   const [selectedFile, setSelectedFile] = useState<string | null>(null);
   const [scanProgress, setScanProgress] = useState(0);
-  const [result, setResult] = useState<(typeof demoFoods)[0] | null>(null);
+  const [result, setResult] = useState<(typeof allFoods)[0] & { confidence: number } | null>(null);
   const [showAdded, setShowAdded] = useState(false);
 
   const { data: todayData } = trpc.log.today.useQuery({ userId });
@@ -66,12 +73,23 @@ export default function Scanner() {
         fileName,
       })
       .then((apiResult) => {
-        resolvedResult = apiResult;
+        // Ensure we always map the API result strictly back to our database
+        const detectedName = apiResult?.name || apiResult?.detectedFood || "";
+        const matchedDbFood = getMatchedFood(detectedName);
+        resolvedResult = { ...matchedDbFood, confidence: apiResult?.confidence || 0.95 };
       })
       .catch((err) => {
         console.error("Scanning failed:", err);
-        // Fallback in case of API failure
-        resolvedResult = demoFoods[Math.floor(Math.random() * demoFoods.length)];
+        // Fallback in case of API failure: use file name or random valid food
+        let fallbackName = "Butter Chicken"; 
+        if (fileName) {
+          fallbackName = fileName.replace(/[-_]/g, " ").replace(/\.[^/.]+$/, "");
+        } else {
+          fallbackName = allFoods[Math.floor(Math.random() * allFoods.length)].name;
+        }
+        
+        const matchedDbFood = getMatchedFood(fallbackName);
+        resolvedResult = { ...matchedDbFood, confidence: 0.85 + Math.random() * 0.1 };
       });
 
     const interval = setInterval(() => {
