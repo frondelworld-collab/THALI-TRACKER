@@ -49,7 +49,7 @@ export const allFoods = [
     "carbs": 42.2,
     "fats": 0.4,
     "fiber": 0.6,
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/001_basmati_rice_steamed.webp"
   },
   {
     "id": 2,
@@ -63,7 +63,7 @@ export const allFoods = [
     "carbs": 42.0,
     "fats": 3.0,
     "fiber": 1.0,
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/032_jeera_rice.webp"
   },
   {
     "id": 3,
@@ -77,7 +77,7 @@ export const allFoods = [
     "carbs": 45.0,
     "fats": 8.0,
     "fiber": 3.0,
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/003_veg_pulao.webp"
   },
   {
     "id": 4,
@@ -91,7 +91,7 @@ export const allFoods = [
     "carbs": 55.0,
     "fats": 14.0,
     "fiber": 5.0,
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/004_veg_biryani.webp"
   },
   {
     "id": 5,
@@ -105,7 +105,7 @@ export const allFoods = [
     "carbs": 62.0,
     "fats": 18.0,
     "fiber": 4.0,
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/005_chicken_biryani.webp"
   },
   {
     "id": 6,
@@ -119,7 +119,7 @@ export const allFoods = [
     "carbs": 60.0,
     "fats": 26.0,
     "fiber": 4.0,
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/006_mutton_biryani.webp"
   },
   {
     "id": 7,
@@ -133,7 +133,7 @@ export const allFoods = [
     "carbs": 52.0,
     "fats": 14.0,
     "fiber": 3.5,
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/007_egg_biryani.webp"
   },
   {
     "id": 8,
@@ -147,7 +147,7 @@ export const allFoods = [
     "carbs": 48.0,
     "fats": 6.0,
     "fiber": 4.5,
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/008_khichdi.webp"
   },
   {
     "id": 9,
@@ -161,7 +161,7 @@ export const allFoods = [
     "carbs": 38.0,
     "fats": 7.0,
     "fiber": 1.0,
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/009_curd_rice.webp"
   },
   {
     "id": 10,
@@ -175,7 +175,7 @@ export const allFoods = [
     "carbs": 35.0,
     "fats": 7.0,
     "fiber": 2.0,
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/010_lemon_rice.webp"
   },
   {
     "id": 11,
@@ -189,7 +189,7 @@ export const allFoods = [
     "carbs": 42.0,
     "fats": 6.0,
     "fiber": 2.5,
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/011_tamarind_rice.webp"
   },
   {
     "id": 12,
@@ -217,7 +217,7 @@ export const allFoods = [
     "carbs": 16.0,
     "fats": 0.5,
     "fiber": 2.0,
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/024_chapati.webp"
   },
   {
     "id": 14,
@@ -231,7 +231,7 @@ export const allFoods = [
     "carbs": 24.0,
     "fats": 1.0,
     "fiber": 3.0,
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/025_tandoori_roti.webp"
   },
   {
     "id": 15,
@@ -245,7 +245,7 @@ export const allFoods = [
     "carbs": 38.0,
     "fats": 9.0,
     "fiber": 2.0,
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/026_butter_naan.webp"
   },
   {
     "id": 16,
@@ -259,7 +259,7 @@ export const allFoods = [
     "carbs": 40.0,
     "fats": 10.0,
     "fiber": 2.0,
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/027_garlic_naan.webp"
   },
   {
     "id": 17,
@@ -273,7 +273,7 @@ export const allFoods = [
     "carbs": 32.0,
     "fats": 8.0,
     "fiber": 2.5,
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/028_plain_paratha.webp"
   },
   {
     "id": 18,
@@ -287,7 +287,7 @@ export const allFoods = [
     "carbs": 48.0,
     "fats": 9.0,
     "fiber": 4.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/029_aloo_paratha.webp"
   },
   {
     "id": 19,
@@ -301,7 +301,7 @@ export const allFoods = [
     "carbs": 40.0,
     "fats": 8.0,
     "fiber": 4.5,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/030_gobi_paratha.webp"
   },
   {
     "id": 20,
@@ -315,7 +315,7 @@ export const allFoods = [
     "carbs": 38.0,
     "fats": 12.0,
     "fiber": 3.0,
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc0?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/031_paneer_paratha.webp"
   },
   {
     "id": 21,
@@ -329,7 +329,7 @@ export const allFoods = [
     "carbs": 28.0,
     "fats": 9.0,
     "fiber": 1.0,
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/033_bhatura.webp"
   },
   {
     "id": 22,
@@ -343,7 +343,7 @@ export const allFoods = [
     "carbs": 12.0,
     "fats": 4.5,
     "fiber": 0.8,
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/083_sev_puri.webp"
   },
   {
     "id": 23,
@@ -357,7 +357,7 @@ export const allFoods = [
     "carbs": 28.0,
     "fats": 1.0,
     "fiber": 1.5,
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/035_rumaali_roti.webp"
   },
   {
     "id": 24,
@@ -371,7 +371,7 @@ export const allFoods = [
     "carbs": 26.0,
     "fats": 3.0,
     "fiber": 3.5,
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/068_missi_roti.webp"
   },
   {
     "id": 25,
@@ -385,7 +385,7 @@ export const allFoods = [
     "carbs": 25.0,
     "fats": 5.0,
     "fiber": 6.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/037_yellow_dal_tadka.webp"
   },
   {
     "id": 26,
@@ -399,7 +399,7 @@ export const allFoods = [
     "carbs": 30.0,
     "fats": 16.0,
     "fiber": 8.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/021_dal_makhani.webp"
   },
   {
     "id": 27,
@@ -413,7 +413,7 @@ export const allFoods = [
     "carbs": 38.0,
     "fats": 9.0,
     "fiber": 10.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/023_chole_masala.webp"
   },
   {
     "id": 28,
@@ -427,7 +427,7 @@ export const allFoods = [
     "carbs": 35.0,
     "fats": 8.0,
     "fiber": 11.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/040_rajma_masala.webp"
   },
   {
     "id": 29,
@@ -441,7 +441,7 @@ export const allFoods = [
     "carbs": 24.0,
     "fats": 3.0,
     "fiber": 5.5,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/041_masoor_dal.webp"
   },
   {
     "id": 30,
@@ -455,7 +455,7 @@ export const allFoods = [
     "carbs": 20.0,
     "fats": 3.0,
     "fiber": 5.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/042_sambhar.webp"
   },
   {
     "id": 31,
@@ -469,7 +469,7 @@ export const allFoods = [
     "carbs": 9.0,
     "fats": 2.0,
     "fiber": 1.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/043_rasam.webp"
   },
   {
     "id": 32,
@@ -483,7 +483,7 @@ export const allFoods = [
     "carbs": 24.0,
     "fats": 12.0,
     "fiber": 3.0,
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/044_kadhi_pakora.webp"
   },
   {
     "id": 33,
@@ -497,7 +497,7 @@ export const allFoods = [
     "carbs": 32.0,
     "fats": 5.0,
     "fiber": 8.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/045_lobia_curry.webp"
   },
   {
     "id": 34,
@@ -511,7 +511,7 @@ export const allFoods = [
     "carbs": 46.0,
     "fats": 5.0,
     "fiber": 5.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/046_moong_dal_khichdi.webp"
   },
   {
     "id": 35,
@@ -525,7 +525,7 @@ export const allFoods = [
     "carbs": 22.0,
     "fats": 9.0,
     "fiber": 5.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/048_aloo_gobi.webp"
   },
   {
     "id": 36,
@@ -539,7 +539,7 @@ export const allFoods = [
     "carbs": 18.0,
     "fats": 7.0,
     "fiber": 6.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/049_bhindi_masala.webp"
   },
   {
     "id": 37,
@@ -553,7 +553,7 @@ export const allFoods = [
     "carbs": 14.0,
     "fats": 7.0,
     "fiber": 5.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/050_baingan_bharta.webp"
   },
   {
     "id": 38,
@@ -567,7 +567,7 @@ export const allFoods = [
     "carbs": 16.0,
     "fats": 6.0,
     "fiber": 5.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/051_mixed_veg_sabzi.webp"
   },
   {
     "id": 39,
@@ -581,7 +581,7 @@ export const allFoods = [
     "carbs": 24.0,
     "fats": 6.5,
     "fiber": 4.5,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/052_aloo_matar.webp"
   },
   {
     "id": 40,
@@ -595,7 +595,7 @@ export const allFoods = [
     "carbs": 20.0,
     "fats": 7.0,
     "fiber": 5.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/053_gobi_matar_masala.webp"
   },
   {
     "id": 41,
@@ -609,7 +609,7 @@ export const allFoods = [
     "carbs": 32.0,
     "fats": 11.0,
     "fiber": 4.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/054_dum_aloo.webp"
   },
   {
     "id": 42,
@@ -623,7 +623,7 @@ export const allFoods = [
     "carbs": 28.0,
     "fats": 5.0,
     "fiber": 1.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/079_mango_lassi.webp"
   },
   {
     "id": 43,
@@ -637,7 +637,7 @@ export const allFoods = [
     "carbs": 12.0,
     "fats": 11.0,
     "fiber": 4.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/055_avial.webp"
   },
   {
     "id": 44,
@@ -651,7 +651,7 @@ export const allFoods = [
     "carbs": 10.0,
     "fats": 4.0,
     "fiber": 3.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/056_lauki_ki_sabzi.webp"
   },
   {
     "id": 45,
@@ -665,7 +665,7 @@ export const allFoods = [
     "carbs": 14.0,
     "fats": 28.0,
     "fiber": 2.0,
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc0?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/057_paneer_butter_masala.webp"
   },
   {
     "id": 46,
@@ -679,7 +679,7 @@ export const allFoods = [
     "carbs": 12.0,
     "fats": 22.0,
     "fiber": 4.0,
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc0?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/058_palak_paneer.webp"
   },
   {
     "id": 47,
@@ -721,7 +721,7 @@ export const allFoods = [
     "carbs": 8.0,
     "fats": 24.0,
     "fiber": 1.5,
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc0?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/061_paneer_bhurji.webp"
   },
   {
     "id": 50,
@@ -735,7 +735,7 @@ export const allFoods = [
     "carbs": 18.0,
     "fats": 18.0,
     "fiber": 4.0,
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc0?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/062_matar_paneer.webp"
   },
   {
     "id": 51,
@@ -749,7 +749,7 @@ export const allFoods = [
     "carbs": 22.0,
     "fats": 32.0,
     "fiber": 2.5,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/063_malai_kofta.webp"
   },
   {
     "id": 52,
@@ -763,7 +763,7 @@ export const allFoods = [
     "carbs": 6.0,
     "fats": 4.0,
     "fiber": 0.5,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/064_raita.webp"
   },
   {
     "id": 53,
@@ -777,7 +777,7 @@ export const allFoods = [
     "carbs": 8.0,
     "fats": 20.0,
     "fiber": 1.0,
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc0?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/008_paneer_tikka.webp"
   },
   {
     "id": 54,
@@ -791,7 +791,7 @@ export const allFoods = [
     "carbs": 12.0,
     "fats": 34.0,
     "fiber": 2.0,
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/009_butter_chicken.webp"
   },
   {
     "id": 55,
@@ -819,7 +819,7 @@ export const allFoods = [
     "carbs": 8.0,
     "fats": 20.0,
     "fiber": 2.0,
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/068_chicken_curry.webp"
   },
   {
     "id": 57,
@@ -847,7 +847,7 @@ export const allFoods = [
     "carbs": 6.0,
     "fats": 18.0,
     "fiber": 1.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/070_goan_fish_curry.webp"
   },
   {
     "id": 59,
@@ -861,7 +861,7 @@ export const allFoods = [
     "carbs": 10.0,
     "fats": 20.0,
     "fiber": 2.0,
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/071_egg_curry.webp"
   },
   {
     "id": 60,
@@ -875,7 +875,7 @@ export const allFoods = [
     "carbs": 4.0,
     "fats": 16.0,
     "fiber": 0.5,
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/072_egg_bhurji.webp"
   },
   {
     "id": 61,
@@ -889,7 +889,7 @@ export const allFoods = [
     "carbs": 3.0,
     "fats": 9.0,
     "fiber": 0.5,
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/073_chicken_seekh_kebab.webp"
   },
   {
     "id": 62,
@@ -903,7 +903,7 @@ export const allFoods = [
     "carbs": 4.0,
     "fats": 13.0,
     "fiber": 0.5,
-    "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/074_tandoori_chicken.webp"
   },
   {
     "id": 63,
@@ -917,7 +917,7 @@ export const allFoods = [
     "carbs": 8.0,
     "fats": 12.0,
     "fiber": 1.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/075_fish_fry.webp"
   },
   {
     "id": 64,
@@ -931,7 +931,7 @@ export const allFoods = [
     "carbs": 20.0,
     "fats": 0.5,
     "fiber": 1.5,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/013_idli.webp"
   },
   {
     "id": 65,
@@ -945,7 +945,7 @@ export const allFoods = [
     "carbs": 25.0,
     "fats": 2.0,
     "fiber": 1.5,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/014_plain_dosa.webp"
   },
   {
     "id": 66,
@@ -987,7 +987,7 @@ export const allFoods = [
     "carbs": 28.0,
     "fats": 12.0,
     "fiber": 3.0,
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/047_medu_vada.webp"
   },
   {
     "id": 69,
@@ -1015,7 +1015,7 @@ export const allFoods = [
     "carbs": 38.0,
     "fats": 5.0,
     "fiber": 2.5,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/093_upma.webp"
   },
   {
     "id": 71,
@@ -1029,7 +1029,7 @@ export const allFoods = [
     "carbs": 45.0,
     "fats": 5.0,
     "fiber": 2.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/019_poha.webp"
   },
   {
     "id": 72,
@@ -1043,7 +1043,7 @@ export const allFoods = [
     "carbs": 50.0,
     "fats": 18.0,
     "fiber": 4.5,
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/020_puri_bhaji.webp"
   },
   {
     "id": 73,
@@ -1057,7 +1057,7 @@ export const allFoods = [
     "carbs": 28.0,
     "fats": 18.0,
     "fiber": 2.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/076_bread_omelette.webp"
   },
   {
     "id": 74,
@@ -1071,7 +1071,7 @@ export const allFoods = [
     "carbs": 32.0,
     "fats": 1.5,
     "fiber": 2.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/021_rava_idli.webp"
   },
   {
     "id": 75,
@@ -1085,7 +1085,7 @@ export const allFoods = [
     "carbs": 24.0,
     "fats": 1.5,
     "fiber": 1.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/022_appam.webp"
   },
   {
     "id": 76,
@@ -1099,7 +1099,7 @@ export const allFoods = [
     "carbs": 62.0,
     "fats": 6.0,
     "fiber": 1.5,
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/023_sabudana_khichdi.webp"
   },
   {
     "id": 77,
@@ -1113,7 +1113,7 @@ export const allFoods = [
     "carbs": 36.0,
     "fats": 16.0,
     "fiber": 3.0,
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/077_samosa.webp"
   },
   {
     "id": 78,
@@ -1127,7 +1127,7 @@ export const allFoods = [
     "carbs": 22.0,
     "fats": 12.0,
     "fiber": 4.0,
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/078_onion_pakora.webp"
   },
   {
     "id": 79,
@@ -1141,7 +1141,7 @@ export const allFoods = [
     "carbs": 28.0,
     "fats": 6.0,
     "fiber": 2.5,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/080_aloo_tikki.webp"
   },
   {
     "id": 80,
@@ -1155,7 +1155,7 @@ export const allFoods = [
     "carbs": 32.0,
     "fats": 4.0,
     "fiber": 2.5,
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/081_pani_puri.webp"
   },
   {
     "id": 81,
@@ -1169,7 +1169,7 @@ export const allFoods = [
     "carbs": 35.0,
     "fats": 3.5,
     "fiber": 3.0,
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/082_bhel_puri.webp"
   },
   {
     "id": 82,
@@ -1183,7 +1183,7 @@ export const allFoods = [
     "carbs": 42.0,
     "fats": 11.0,
     "fiber": 3.5,
-    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/083_sev_puri.webp"
   },
   {
     "id": 83,
@@ -1197,7 +1197,7 @@ export const allFoods = [
     "carbs": 34.0,
     "fats": 10.0,
     "fiber": 3.5,
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/084_dahi_vada.webp"
   },
   {
     "id": 84,
@@ -1211,7 +1211,7 @@ export const allFoods = [
     "carbs": 62.0,
     "fats": 14.0,
     "fiber": 6.5,
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/106_pav_bhaji.webp"
   },
   {
     "id": 85,
@@ -1225,7 +1225,7 @@ export const allFoods = [
     "carbs": 45.0,
     "fats": 10.0,
     "fiber": 3.5,
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/086_vada_pav.webp"
   },
   {
     "id": 86,
@@ -1239,7 +1239,7 @@ export const allFoods = [
     "carbs": 22.0,
     "fats": 2.5,
     "fiber": 2.5,
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/087_dhokla.webp"
   },
   {
     "id": 87,
@@ -1253,7 +1253,7 @@ export const allFoods = [
     "carbs": 14.0,
     "fats": 5.0,
     "fiber": 0.5,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/088_masala_chai.webp"
   },
   {
     "id": 88,
@@ -1267,7 +1267,7 @@ export const allFoods = [
     "carbs": 36.0,
     "fats": 14.0,
     "fiber": 3.0,
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/089_kachori.webp"
   },
   {
     "id": 89,
@@ -1281,7 +1281,7 @@ export const allFoods = [
     "carbs": 48.0,
     "fats": 12.0,
     "fiber": 3.5,
-    "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/090_papdi_chaat.webp"
   },
   {
     "id": 90,
@@ -1295,7 +1295,7 @@ export const allFoods = [
     "carbs": 42.0,
     "fats": 11.0,
     "fiber": 0.5,
-    "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/091_gulab_jamun.webp"
   },
   {
     "id": 91,
@@ -1309,7 +1309,7 @@ export const allFoods = [
     "carbs": 28.0,
     "fats": 3.0,
     "fiber": 0.0,
-    "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/049_rasgulla.webp"
   },
   {
     "id": 92,
@@ -1323,7 +1323,7 @@ export const allFoods = [
     "carbs": 30.0,
     "fats": 8.0,
     "fiber": 0.5,
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/111_rice_kheer.webp"
   },
   {
     "id": 93,
@@ -1337,7 +1337,7 @@ export const allFoods = [
     "carbs": 38.0,
     "fats": 13.0,
     "fiber": 2.5,
-    "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/112_gajar_ka_halwa.webp"
   },
   {
     "id": 94,
@@ -1351,7 +1351,7 @@ export const allFoods = [
     "carbs": 42.0,
     "fats": 8.0,
     "fiber": 0.5,
-    "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/051_jalebi.webp"
   },
   {
     "id": 95,
@@ -1365,7 +1365,7 @@ export const allFoods = [
     "carbs": 26.0,
     "fats": 12.0,
     "fiber": 0.2,
-    "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/113_rasmalai.webp"
   },
   {
     "id": 96,
@@ -1379,7 +1379,7 @@ export const allFoods = [
     "carbs": 22.0,
     "fats": 8.0,
     "fiber": 0.2,
-    "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/114_kulfi.webp"
   },
   {
     "id": 97,
@@ -1393,7 +1393,7 @@ export const allFoods = [
     "carbs": 18.0,
     "fats": 7.5,
     "fiber": 1.0,
-    "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/115_besan_laddoo.webp"
   },
   {
     "id": 98,
@@ -1407,7 +1407,7 @@ export const allFoods = [
     "carbs": 16.0,
     "fats": 7.5,
     "fiber": 0.5,
-    "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/116_kaju_katli.webp"
   },
   {
     "id": 99,
@@ -1421,7 +1421,7 @@ export const allFoods = [
     "carbs": 22.0,
     "fats": 7.5,
     "fiber": 0.1,
-    "image": "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/117_peda.webp"
   },
   {
     "id": 100,
@@ -1435,6 +1435,6 @@ export const allFoods = [
     "carbs": 8.0,
     "fats": 4.0,
     "fiber": 0.0,
-    "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/047_filter_coffee.webp"
   }
 ];
