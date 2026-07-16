@@ -1,5 +1,5 @@
-
 import { useState, useRef, useCallback } from "react";
+import { allFoods } from "@/data/foodData";
 import { useNavigate } from "react-router";
 import { trpc } from "@/providers/trpc";
 import { useAuth } from "@/hooks/useAuth";
@@ -14,15 +14,7 @@ import {
   Check,
 } from "lucide-react";
 
-const demoFoods = [
-  { name: "Butter Chicken", calories: 490, protein: 35, carbs: 12, fats: 34, image: "/butter-chicken.jpg", confidence: 0.94 },
-  { name: "Paneer Tikka", calories: 280, protein: 18, carbs: 8, fats: 20, image: "/paneer-tikka.jpg", confidence: 0.91 },
-  { name: "Dal Makhani", calories: 320, protein: 14, carbs: 30, fats: 16, image: "/dal-makhani.jpg", confidence: 0.89 },
-  { name: "Jeera Rice", calories: 210, protein: 4, carbs: 42, fats: 3, image: "/jeera-rice.jpg", confidence: 0.93 },
-  { name: "Palak Paneer", calories: 310, protein: 18, carbs: 12, fats: 22, image: "/palak-paneer.jpg", confidence: 0.87 },
-  { name: "Chole Masala", calories: 280, protein: 12, carbs: 38, fats: 9, image: "/chole-masala.jpg", confidence: 0.90 },
-  { name: "Dal Chawal", calories: 380, protein: 11, carbs: 65, fats: 8, image: "/dal-makhani.jpg", confidence: 0.95 },
-];
+const demoFoods = allFoods.map(f => ({ ...f, confidence: 0.9 + Math.random() * 0.05 }));
 
 export default function Scanner() {
   const navigate = useNavigate();
