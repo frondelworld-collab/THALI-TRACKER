@@ -145,7 +145,34 @@ export default function ThaliBuilder() {
         mealType,
       });
     }
+    
+    const payload = {
+      date: new Date().toDateString(),
+      calories: nutrition.calories,
+      protein: nutrition.protein,
+      carbs: nutrition.carbs,
+      fats: nutrition.fats,
+      items: thaliItems,
+    };
+    
+    const existingStr = localStorage.getItem('daily_thali_log');
+    if (existingStr) {
+      try {
+        const existingLog = JSON.parse(existingStr);
+        if (existingLog.date === payload.date) {
+          payload.calories += existingLog.calories;
+          payload.protein += existingLog.protein;
+          payload.carbs += existingLog.carbs;
+          payload.fats += existingLog.fats;
+          payload.items = [...existingLog.items, ...payload.items];
+        }
+      } catch (e) {}
+    }
+    
+    localStorage.setItem('daily_thali_log', JSON.stringify(payload));
+
     setThaliItems([]);
+    navigate("/");
   };
 
   return (

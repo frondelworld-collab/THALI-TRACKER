@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { allFoods, foodCategories } from "@/data/foodData";
 import { useAuth } from "@/hooks/useAuth";
@@ -21,6 +21,20 @@ const categoryIcons: Record<string, React.ElementType> = {
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
+  const [localLog, setLocalLog] = useState<any>(null);
+
+  useEffect(() => {
+    const existingStr = localStorage.getItem('daily_thali_log');
+    if (existingStr) {
+      try {
+        const existingLog = JSON.parse(existingStr);
+        if (existingLog.date === new Date().toDateString()) {
+          setLocalLog(existingLog);
+        }
+      } catch (e) {}
+    }
+  }, []);
+
   const { user } = useAuth();
   const userId = user?.id ?? 0;
   const { data: todayData } = trpc.log.today.useQuery(
@@ -45,7 +59,12 @@ export default function Home() {
     span: i % 3 === 0 ? "row-span-2" : "row-span-1",
   }));
 
-  const totals = todayData?.totals ?? { calories: 0, protein: 0, carbs: 0, fats: 0 };
+  const totals = localLog ? {
+    calories: localLog.calories,
+    protein: localLog.protein,
+    carbs: localLog.carbs,
+    fats: localLog.fats,
+  } : todayData?.totals ?? { calories: 0, protein: 0, carbs: 0, fats: 0 };
   const log = todayData?.log;
   const calorieGoal = log?.calorieGoal ?? 2000;
   const calPercent = Math.min((totals.calories / calorieGoal) * 100, 100);
@@ -178,33 +197,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Thali */}
+      {/* Featured Thali or Today's Thali */}
       <section className="px-4 mt-6">
         <div className="bg-[#fef3c7] rounded-3xl p-5">
-          <h2 className="font-serif text-xl text-[#1c1917] mb-1">Featured Balanced Thali</h2>
-          <p className="text-xs text-[#78716c] mb-4">A nutritious combination for a healthy day</p>
-
-          <div className="grid grid-cols-3 gap-3">
-            {[
-              { name: "Dal Makhani", fallbackImg: "/dal-makhani.jpg" },
-              { name: "Jeera Rice", fallbackImg: "/jeera-rice.jpg" },
-              { name: "Paneer Tikka", fallbackImg: "/paneer-tikka.jpg" },
-            ].map((item) => {
-              const dbItem = allFoods.find(f => f.name === item.name);
-              return (
-              <div key={item.name} className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <img src={dbItem?.image || item.fallbackImg} alt={item.name} className="w-full h-20 object-cover" />
-                <div className="p-2">
-                  <p className="text-[10px] font-medium text-[#1c1917] leading-tight">{item.name}</p>
-                  <p className="text-[9px] text-[#78716c]">{dbItem?.calories || 0} kcal</p>
-                </div>
+          {localLog && localLog.items?.length > 0 ? (
+            <>
+              <h2 className="font-serif text-xl text-[#1c1917] mb-1">Today's Thali</h2>
+              <p className="text-xs text-[#78716c] mb-4">Your personalized tracked meals for today</p>
+              
+              <div className="grid grid-cols-3 gap-3">
+                {localLog.items.map((item: any, idx: number) => {
+                  const dbItem = allFoods.find(f => f.id === item.foodId);
+                  return (
+                    <div key={`${item.foodId}-${idx}`} className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                      <img src={dbItem?.image || "/hero-thali.jpg"} alt={item.name} className="w-full h-20 object-cover" />
+                      <div className="p-2">
+                        <p className="text-[10px] font-medium text-[#1c1917] leading-tight truncate">{item.name}</p>
+                        <p className="text-[9px] text-[#78716c]">{item.quantity}x • {item.calories || 0} kcal</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
-            )})}
-          </div>
+            </>
+          ) : (
+            <>
+              <h2 className="font-serif text-xl text-[#1c1917] mb-1">Featured Balanced Thali</h2>
+              <p className="text-xs text-[#78716c] mb-4">A nutritious combination for a healthy day</p>
+
+              <div className="grid grid-cols-3 gap-3">
+                {[
+                  { name: "Dal Makhani", fallbackImg: "/dal-makhani.jpg" },
+                  { name: "Jeera Rice", fallbackImg: "/jeera-rice.jpg" },
+                  { name: "Paneer Tikka", fallbackImg: "/paneer-tikka.jpg" },
+                ].map((item) => {
+                  const dbItem = allFoods.find(f => f.name === item.name);
+                  return (
+                  <div key={item.name} className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                    <img src={dbItem?.image || item.fallbackImg} alt={item.name} className="w-full h-20 object-cover" />
+                    <div className="p-2">
+                      <p className="text-[10px] font-medium text-[#1c1917] leading-tight">{item.name}</p>
+                      <p className="text-[9px] text-[#78716c]">{dbItem?.calories || 0} kcal</p>
+                    </div>
+                  </div>
+                  );
+                })}
+              </div>
+            </>
+          )}
 
           <div className="mt-4 flex items-center justify-between bg-white/60 rounded-xl px-4 py-2.5">
             <span className="text-sm text-[#1c1917] font-medium">Total</span>
-            <span className="text-sm text-[#c2410c] font-serif font-medium">810 kcal</span>
+            <span className="text-sm text-[#c2410c] font-serif font-medium">{totals.calories} kcal</span>
           </div>
         </div>
       </section>
