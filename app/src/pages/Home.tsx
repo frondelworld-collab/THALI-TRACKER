@@ -1,11 +1,26 @@
+import { useState } from "react";
 import { Link } from "react-router";
 import { allFoods, foodCategories } from "@/data/foodData";
 import { useAuth } from "@/hooks/useAuth";
 import { trpc } from "@/providers/trpc";
-import { ScanLine, UtensilsCrossed, TrendingUp, Flame, Award } from "lucide-react";
+import { ScanLine, UtensilsCrossed, TrendingUp, Flame, Award, Wheat, Beef, Carrot, Bean, Milk, Cookie, CupSoda, Cake, Croissant, Coffee } from "lucide-react";
+
+const categoryIcons: Record<string, React.ElementType> = {
+  wheat: Wheat,
+  beef: Beef,
+  carrot: Carrot,
+  bean: Bean,
+  milk: Milk,
+  cookie: Cookie,
+  cupSoda: CupSoda,
+  cake: Cake,
+  croissant: Croissant,
+  coffee: Coffee,
+};
 
 
 export default function Home() {
+  const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
   const { user } = useAuth();
   const userId = user?.id ?? 0;
   const { data: todayData } = trpc.log.today.useQuery(
@@ -14,7 +29,12 @@ export default function Home() {
   );
 
   const categories = foodCategories;
-  const popularFoods = allFoods;
+  
+  const filteredFoods = selectedCategory 
+    ? allFoods.filter(f => f.categoryId === selectedCategory) 
+    : allFoods;
+    
+  const popularFoods = filteredFoods.slice(0, 6);
 
   const activityItems = popularFoods.map((food, i) => ({
     id: food.id,
@@ -166,18 +186,20 @@ export default function Home() {
 
           <div className="grid grid-cols-3 gap-3">
             {[
-              { name: "Dal Makhani", cal: 320, img: "/dal-makhani.jpg" },
-              { name: "Jeera Rice", cal: 210, img: "/jeera-rice.jpg" },
-              { name: "Paneer Tikka", cal: 280, img: "/paneer-tikka.jpg" },
-            ].map((item) => (
+              { name: "Dal Makhani", fallbackImg: "/dal-makhani.jpg" },
+              { name: "Jeera Rice", fallbackImg: "/jeera-rice.jpg" },
+              { name: "Paneer Tikka", fallbackImg: "/paneer-tikka.jpg" },
+            ].map((item) => {
+              const dbItem = allFoods.find(f => f.name === item.name);
+              return (
               <div key={item.name} className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                <img src={item.img} alt={item.name} className="w-full h-20 object-cover" />
+                <img src={dbItem?.image || item.fallbackImg} alt={item.name} className="w-full h-20 object-cover" />
                 <div className="p-2">
                   <p className="text-[10px] font-medium text-[#1c1917] leading-tight">{item.name}</p>
-                  <p className="text-[9px] text-[#78716c]">{item.cal} kcal</p>
+                  <p className="text-[9px] text-[#78716c]">{dbItem?.calories || 0} kcal</p>
                 </div>
               </div>
-            ))}
+            )})}
           </div>
 
           <div className="mt-4 flex items-center justify-between bg-white/60 rounded-xl px-4 py-2.5">
@@ -190,7 +212,39 @@ export default function Home() {
       {/* Activity Feed - Masonry Grid */}
       <section className="px-4 mt-6 pb-8">
         <h2 className="font-serif text-xl text-[#1c1917] mb-4">Explore Foods</h2>
-        <div className="grid grid-cols-2 gap-3">
+        
+        {/* Category Tabs */}
+        <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide">
+          <button
+            onClick={() => setSelectedCategory(null)}
+            className={`shrink-0 px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap transition-all ${
+              selectedCategory === null
+                ? "bg-[#1c1917] text-white"
+                : "bg-[#f5f5f4] text-[#78716c] hover:bg-[#e7e5e4]"
+            }`}
+          >
+            All Foods
+          </button>
+          {categories?.map((cat) => {
+            const Icon = categoryIcons[cat.icon ?? "wheat"] ?? Wheat;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => setSelectedCategory(cat.id)}
+                className={`shrink-0 px-4 py-2 rounded-full text-xs font-medium whitespace-nowrap transition-all flex items-center gap-1.5 ${
+                  selectedCategory === cat.id
+                    ? "bg-[#c2410c] text-white"
+                    : "bg-[#f5f5f4] text-[#78716c] hover:bg-[#e7e5e4]"
+                }`}
+              >
+                <Icon className="w-3 h-3" />
+                {cat.name}
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="grid grid-cols-2 gap-3 mb-4">
           {activityItems.map((item) => (
             <Link
               key={item.id}
@@ -211,6 +265,13 @@ export default function Home() {
             </Link>
           ))}
         </div>
+        
+        <Link
+          to="/thali"
+          className="w-full mt-2 bg-[#f5f5f4] text-[#1c1917] py-3 rounded-2xl font-medium text-sm hover:bg-[#e7e5e4] transition-colors flex items-center justify-center"
+        >
+          View All in Thali Builder
+        </Link>
       </section>
     </div>
   );
