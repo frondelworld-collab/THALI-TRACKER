@@ -227,48 +227,53 @@ export default function Scanner() {
       {/* Idle State */}
       {scanState === "idle" && (
         <div className="flex flex-col items-center justify-center min-h-screen px-6">
-          <div className="relative mb-8">
-            <div className="w-48 h-48 rounded-full border-2 border-dashed border-white/20 flex items-center justify-center">
-              <div className="w-40 h-40 rounded-full bg-white/5 flex items-center justify-center">
-                <Camera className="w-12 h-12 text-white/40" />
-              </div>
+          <div className="relative mb-8 mt-12 w-full max-w-[280px] aspect-square rounded-3xl border-2 border-white/20 flex flex-col items-center justify-center bg-white/5 overflow-hidden">
+            {/* Viewfinder brackets */}
+            <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-white/60 rounded-tl-lg" />
+            <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-white/60 rounded-tr-lg" />
+            <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-white/60 rounded-bl-lg" />
+            <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-white/60 rounded-br-lg" />
+            
+            <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-3">
+              <Camera className="w-8 h-8 text-white/60" />
             </div>
-            <div className="absolute -bottom-2 -right-2 w-14 h-14 bg-[#c2410c] rounded-2xl flex items-center justify-center shadow-lg">
-              <Sparkles className="w-6 h-6 text-white" />
-            </div>
+            <p className="text-white/40 text-sm">Align food in frame</p>
           </div>
 
           <h2 className="font-serif text-2xl text-center mb-2">Scan Your Meal</h2>
           <p className="text-white/50 text-sm text-center mb-8 max-w-[260px]">
-            Take a photo or upload an image of any Indian dish to get instant nutritional analysis
+            Take a photo of any Indian dish to get instant nutritional analysis
           </p>
 
           <div className="flex flex-col gap-3 w-full max-w-[280px]">
             <button
               onClick={() => fileInputRef.current?.click()}
-              className="w-full bg-[#c2410c] hover:bg-[#a83a0a] text-white py-3.5 rounded-2xl font-medium text-sm transition-colors flex items-center justify-center gap-2"
+              className="w-full bg-[#c2410c] hover:bg-[#a83a0a] text-white py-4 rounded-full font-medium text-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-[#c2410c]/30"
             >
-              <Upload className="w-4 h-4" />
-              Upload Photo
+              <Camera className="w-6 h-6" />
+              Tap to Scan Food
             </button>
             <button
               onClick={() => {
                 setSelectedFile("/hero-thali.jpg");
                 startScan("/hero-thali.jpg", "hero-thali.jpg");
               }}
-              className="w-full bg-white/10 hover:bg-white/20 text-white py-3.5 rounded-2xl font-medium text-sm transition-colors flex items-center justify-center gap-2"
+              className="w-full bg-white/10 hover:bg-white/20 text-white py-3.5 rounded-full font-medium text-sm transition-colors flex items-center justify-center gap-2 mt-2"
             >
-              <Camera className="w-4 h-4" />
+              <Sparkles className="w-4 h-4" />
               Try Demo Scan
             </button>
           </div>
 
           <input
             ref={fileInputRef}
+            id="mobile-camera-input"
             type="file"
             accept="image/*"
+            capture="environment"
             onChange={handleFileSelect}
             className="hidden"
+            style={{ display: 'none' }}
           />
         </div>
       )}
@@ -310,9 +315,9 @@ export default function Scanner() {
 
       {/* Result State */}
       {scanState === "result" && result && (
-        <div className="min-h-screen flex flex-col">
+        <div className="h-screen flex flex-col bg-[#1c1917] overflow-hidden">
           {/* Image Hero */}
-          <div className="relative h-[40vh]">
+          <div className="relative flex-none h-[35vh]">
             <img
               src={selectedFile ?? result.image}
               alt={result.name}
@@ -328,8 +333,8 @@ export default function Scanner() {
           </div>
 
           {/* Results Sheet */}
-          <div className="flex-1 bg-white rounded-t-3xl -mt-6 relative z-10 px-5 pt-6 pb-8">
-            <div className="w-12 h-1 bg-[#e7e5e4] rounded-full mx-auto mb-6" />
+          <div className="flex-1 bg-white rounded-t-3xl -mt-6 relative z-10 px-5 pt-5 pb-6 flex flex-col overflow-y-auto">
+            <div className="w-12 h-1 bg-[#e7e5e4] rounded-full mx-auto mb-4 flex-none" />
 
             <h2 className="font-serif text-2xl text-[#1c1917] mb-1">{result.name}</h2>
             <div className="flex items-center gap-2 mb-6">
@@ -402,22 +407,29 @@ export default function Scanner() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex gap-3">
+            <div className="mt-auto pt-4">
               <button
                 onClick={addToLog}
-                disabled={addItem.isPending}
-                className="flex-1 bg-[#c2410c] text-white py-3.5 rounded-2xl font-medium text-sm hover:bg-[#a83a0a] transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+                disabled={showAdded || addItem.isPending}
+                className="w-full bg-[#1c1917] text-white py-3.5 rounded-2xl font-medium text-sm hover:bg-black transition-colors disabled:bg-[#1c1917]/50 flex items-center justify-center gap-2 shadow-xl shadow-black/10"
               >
                 {addItem.isPending ? (
-                  <Loader2 className="w-4 h-4 animate-spin" />
+                  <Loader2 className="w-5 h-5 animate-spin" />
+                ) : showAdded ? (
+                  <>
+                    <Check className="w-5 h-5 text-green-400" />
+                    Added to Today's Log
+                  </>
                 ) : (
-                  <Plus className="w-4 h-4" />
+                  <>
+                    <Plus className="w-5 h-5" />
+                    Add to Daily Log
+                  </>
                 )}
-                Add to Log
               </button>
               <button
                 onClick={reset}
-                className="px-5 py-3.5 rounded-2xl border border-[#e7e5e4] text-sm font-medium text-[#78716c] hover:bg-[#f5f5f4] transition-colors"
+                className="w-full mt-3 py-3.5 rounded-2xl border border-[#e7e5e4] text-sm font-medium text-[#78716c] hover:bg-[#f5f5f4] transition-colors"
               >
                 Scan Again
               </button>
