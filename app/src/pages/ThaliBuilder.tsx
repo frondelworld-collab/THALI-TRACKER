@@ -17,6 +17,8 @@ import {
   Plus,
   Minus,
   Check,
+  Croissant,
+  Coffee,
 } from "lucide-react";
 
 const categoryIcons: Record<string, React.ElementType> = {
@@ -28,15 +30,19 @@ const categoryIcons: Record<string, React.ElementType> = {
   cookie: Cookie,
   cupSoda: CupSoda,
   cake: Cake,
+  croissant: Croissant,
+  coffee: Coffee,
 };
 
 const layerMap: Record<number, keyof typeof defaultLayers> = {
   4: "dal",    // Lentils & Dal
-  6: "rice",   // Rice
+  6: "rice",   // Rice (wait, maybe change ID for Grains & Rice?) Let's see what IDs I will assign.
   2: "curry",  // Proteins (treated as curry on plate)
   5: "curry",  // Dairy (paneer dishes as curry)
   3: "curry",  // Vegetables
-  1: "roti",   // Grains & Breads
+  1: "rice",   // Grains & Rice mapped to rice
+  11: "roti",  // Breads & Rotis mapped to roti
+  12: "roti",  // Breakfast & South Indian mapped to roti or curry? Let's just say 'roti'
 };
 
 const defaultLayers = { dal: false, rice: false, curry: false, roti: false };
