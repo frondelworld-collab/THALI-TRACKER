@@ -18,13 +18,15 @@ export const scanRouter = createRouter({
       const allDbFoods = await db.select().from(foods);
       const foodNames = allDbFoods.map((f) => f.name);
 
-      const apiKey = process.env.GEMINI_API_KEY;
+      let apiKey = process.env.GEMINI_API_KEY;
       let detectedName = "";
       let confidence = 0.95;
       let calories = 350;
       let protein = 10;
       let carbs = 50;
       let fats = 8;
+      let servingSize = "1 serving (~250g)";
+      let servingSizeG = 250;
 
       if (apiKey && input.base64Image.startsWith("data:")) {
         try {
@@ -50,7 +52,7 @@ export const scanRouter = createRouter({
                     {
                       parts: [
                         {
-                          text: `Analyze the image and identify the food. Pick the closest match from this list if possible: ${foodNames.join(", ")}. Return a JSON object with: { "detectedFood": "Name of the dish", "confidence": a number from 0.0 to 1.0 representing how confident you are, "calories": estimated calories as integer, "protein": estimated protein in grams, "carbs": estimated carbs in grams, "fats": estimated fats in grams }`,
+                          text: `Analyze the image and identify the food. Pick the closest match from this list if possible: ${foodNames.join(", ")}. Return a JSON object with: { "detectedFood": "Name of the dish", "confidence": a number from 0.0 to 1.0 representing how confident you are, "calories": estimated calories as integer, "protein": estimated protein in grams, "carbs": estimated carbs in grams, "fats": estimated fats in grams, "servingSize": estimated portion description e.g. "1 bowl (200g)", "servingSizeG": estimated weight in grams e.g. 200 }`,
                         },
                         {
                           inlineData: {
@@ -88,6 +90,8 @@ export const scanRouter = createRouter({
               protein = parsed.protein ?? 10;
               carbs = parsed.carbs ?? 50;
               fats = parsed.fats ?? 8;
+              servingSize = parsed.servingSize ?? "1 serving (~250g)";
+              servingSizeG = parsed.servingSizeG ?? 250;
             }
           } else {
             console.error("Gemini API error:", await response.text());
@@ -121,6 +125,8 @@ export const scanRouter = createRouter({
         protein: matchedDbFood ? matchedDbFood.protein : protein,
         carbs: matchedDbFood ? matchedDbFood.carbs : carbs,
         fats: matchedDbFood ? matchedDbFood.fats : fats,
+        servingSize: matchedDbFood?.servingSize || servingSize,
+        servingSizeG: matchedDbFood?.servingSizeG || servingSizeG,
         confidence,
         image: matchedDbFood?.image ?? `https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800&query=${encodeURIComponent(detectedName)}`,
       };

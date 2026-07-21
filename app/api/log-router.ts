@@ -126,6 +126,8 @@ export const logRouter = createRouter({
           carbs: z.number(),
           fats: z.number(),
           image: z.string().optional(),
+          servingSize: z.string().optional(),
+          servingSizeG: z.number().optional(),
         }).optional(),
         quantity: z.number().min(0.1).max(10).default(1),
         mealType: z.enum(["breakfast", "lunch", "dinner", "snack"]),
@@ -152,7 +154,7 @@ export const logRouter = createRouter({
             carbs: input.customMacros.carbs,
             fats: input.customMacros.fats,
             image: input.customMacros.image || "",
-            servingSize: "1 serving",
+            servingSize: input.customMacros.servingSize || "1 serving",
           });
           fId = Number((insertResult as unknown as { insertId: number }).insertId ?? 1);
         }

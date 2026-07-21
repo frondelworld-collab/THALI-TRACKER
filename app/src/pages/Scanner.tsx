@@ -143,6 +143,8 @@ export default function Scanner() {
         carbs: result.carbs,
         fats: result.fats,
         image: result.image,
+        servingSize: result.servingSize,
+        servingSizeG: result.servingSizeG,
       },
       quantity: 1,
       mealType: "lunch",
@@ -387,7 +389,7 @@ export default function Scanner() {
                 </div>
               </div>
               <p className="text-sm text-[#78716c]">
-                Estimated for a standard serving. Calorie content may vary based on preparation method and portion size.
+                Estimated for <span className="font-semibold text-[#1c1917]">{result.servingSize || `~${result.servingSizeG || 250}g serving`}</span>. Calorie content may vary based on preparation method and portion size.
               </p>
             </div>
 
