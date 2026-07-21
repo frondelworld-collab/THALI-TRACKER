@@ -367,12 +367,6 @@ export default function Scanner() {
               </span>
             </div>
 
-            {result.confidence < 0.65 && (
-              <div className="mb-6 p-3 bg-red-50 text-red-700 rounded-xl text-sm border border-red-100 flex items-start gap-2">
-                <span className="text-xl">⚠️</span>
-                <p><strong>Low Confidence:</strong> We're not completely sure what this is. Please verify the nutritional estimates before adding to your log.</p>
-              </div>
-            )}
 
             {/* Calorie Ring */}
             <div className="flex items-center gap-4 mb-6">

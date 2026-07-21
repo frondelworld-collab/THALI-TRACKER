@@ -693,7 +693,7 @@ export const allFoods = [
     "carbs": 13.0,
     "fats": 25.0,
     "fiber": 3.0,
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc0?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/059_kadai_paneer.webp"
   },
   {
     "id": 48,
@@ -707,7 +707,7 @@ export const allFoods = [
     "carbs": 12.0,
     "fats": 26.0,
     "fiber": 1.5,
-    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc0?auto=format&fit=crop&q=80&w=800"
+    "image": "/assets/images/060_shahi_paneer.webp"
   },
   {
     "id": 49,
