@@ -33,35 +33,49 @@ export const scanRouter = createRouter({
           const mimeType = match[1];
           const base64Data = match[2];
 
-          const response = await fetch(
-            `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                contents: [
-                  {
-                    parts: [
-                      {
-                        text: `Identify the Indian food in this image. You MUST select the most accurate match from this database list of foods: ${foodNames.join(", ")}. If the food is not clearly in the list, choose the closest generic one (like 'Basmati Rice (Steamed)' or 'Yellow Dal Tadka'). Return a JSON object with: { "detectedFood": "exact food name from the list", "confidence": 0.0 to 1.0, "calories": estimated calories, "protein": estimated protein, "carbs": estimated carbs, "fats": estimated fats }`,
-                      },
-                      {
-                        inlineData: {
-                          mimeType,
-                          data: base64Data,
-                        },
-                      },
-                    ],
-                  },
-                ],
-                generationConfig: {
-                  responseMimeType: "application/json",
+          let maxRetries = 3;
+          let attempt = 0;
+          let response;
+
+          while (attempt < maxRetries) {
+            response = await fetch(
+              `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${process.env.GEMINI_API_KEY}`,
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
                 },
-              }),
+                body: JSON.stringify({
+                  contents: [
+                    {
+                      parts: [
+                        {
+                          text: `Analyze the image and identify the food. Pick the closest match from this list if possible: ${foodNames.join(", ")}. Return a JSON object with: { "detectedFood": "Name of the dish", "confidence": a number from 0.0 to 1.0 representing how confident you are, "calories": estimated calories as integer, "protein": estimated protein in grams, "carbs": estimated carbs in grams, "fats": estimated fats in grams }`,
+                        },
+                        {
+                          inlineData: {
+                            mimeType,
+                            data: base64Data,
+                          },
+                        },
+                      ],
+                    },
+                  ],
+                  generationConfig: {
+                    responseMimeType: "application/json",
+                  },
+                }),
+              }
+            );
+
+            if (response.status === 429) {
+              attempt++;
+              console.warn(`Gemini API rate limited (429). Retrying attempt ${attempt}...`);
+              await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
+              continue;
             }
-          );
+            break;
+          }
 
           if (response.ok) {
             const data = (await response.json()) as any;
@@ -87,44 +101,28 @@ export const scanRouter = createRouter({
       if (!detectedName) {
         if (input.fileName) {
           const lowerName = input.fileName.toLowerCase();
-          if (lowerName.includes("dal") && (lowerName.includes("chawal") || lowerName.includes("rice"))) {
-            detectedName = "Dal Chawal";
-          } else if (lowerName.includes("thali")) {
-            detectedName = "Dal Chawal";
-          } else if (lowerName.includes("dal") || lowerName.includes("makhani")) {
-            detectedName = "Dal Makhani";
-          } else if (lowerName.includes("rice") || lowerName.includes("chawal") || lowerName.includes("jeera")) {
-            detectedName = "Jeera Rice";
-          } else if (lowerName.includes("butter") || lowerName.includes("chicken")) {
-            detectedName = "Butter Chicken";
-          } else if (lowerName.includes("paneer") && lowerName.includes("tikka")) {
-            detectedName = "Paneer Tikka";
-          } else if (lowerName.includes("paneer") || lowerName.includes("palak")) {
-            detectedName = "Palak Paneer";
-          } else if (lowerName.includes("chole") || lowerName.includes("masala")) {
-            detectedName = "Chole Masala";
-          }
-        }
-
-        // If still not matched, pick a random food from the database list
-        if (!detectedName && foodNames.length > 0) {
-          detectedName = foodNames[Math.floor(Math.random() * foodNames.length)];
+          const cleanName = lowerName.replace(/[-_]/g, " ").replace(/\.[^/.]+$/, "");
+          detectedName = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
+          confidence = 0.8;
+        } else {
+          detectedName = "Unrecognized Food";
+          confidence = 0.3;
         }
       }
 
       // Get the database food item details for the final classification
       const matchedDbFood = allDbFoods.find(
-        (f) => f.name.toLowerCase() === detectedName.toLowerCase()
-      ) ?? allDbFoods[0];
+        (f) => f.name.toLowerCase() === detectedName.toLowerCase() || detectedName.toLowerCase().includes(f.name.toLowerCase())
+      );
 
       return {
-        name: matchedDbFood?.name ?? "Yellow Dal Tadka",
-        calories: matchedDbFood ? Number(matchedDbFood.calories) : calories,
-        protein: matchedDbFood ? Number(matchedDbFood.protein) : protein,
-        carbs: matchedDbFood ? Number(matchedDbFood.carbs) : carbs,
-        fats: matchedDbFood ? Number(matchedDbFood.fats) : fats,
+        name: matchedDbFood?.name || detectedName,
+        calories: matchedDbFood ? matchedDbFood.calories : calories,
+        protein: matchedDbFood ? matchedDbFood.protein : protein,
+        carbs: matchedDbFood ? matchedDbFood.carbs : carbs,
+        fats: matchedDbFood ? matchedDbFood.fats : fats,
         confidence,
-        image: matchedDbFood?.image ?? "/dal-makhani.jpg",
+        image: matchedDbFood?.image ?? `https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800&query=${encodeURIComponent(detectedName)}`,
       };
     }),
 

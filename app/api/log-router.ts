@@ -118,7 +118,15 @@ export const logRouter = createRouter({
     .input(
       z.object({
         logId: z.number(),
-        foodId: z.number(),
+        foodId: z.number().optional(),
+        foodName: z.string().optional(),
+        customMacros: z.object({
+          calories: z.number(),
+          protein: z.number(),
+          carbs: z.number(),
+          fats: z.number(),
+          image: z.string().optional(),
+        }).optional(),
         quantity: z.number().min(0.1).max(10).default(1),
         mealType: z.enum(["breakfast", "lunch", "dinner", "snack"]),
       })
@@ -126,23 +134,48 @@ export const logRouter = createRouter({
     .mutation(async ({ input }) => {
       const db = getDb();
 
-      const food = await db
-        .select()
-        .from(foods)
-        .where(eq(foods.id, input.foodId))
-        .then((rows) => rows[0]);
-
-      if (!food) throw new Error("Food not found");
-
+      let fId = input.foodId;
+      let calories = 0, protein = 0, carbs = 0, fats = 0;
       const q = input.quantity;
-      const calories = Math.round(food.calories * q);
-      const protein = Number(food.protein) * q;
-      const carbs = Number(food.carbs) * q;
-      const fats = Number(food.fats) * q;
+
+      if (!fId && input.foodName && input.customMacros) {
+        // Find existing custom food or create new one
+        let existing = await db.select().from(foods).where(eq(foods.name, input.foodName)).then((rows) => rows[0]);
+        if (existing) {
+          fId = existing.id;
+        } else {
+          const insertResult = await db.insert(foods).values({
+            name: input.foodName,
+            categoryId: 6, // Generic category
+            calories: input.customMacros.calories,
+            protein: input.customMacros.protein,
+            carbs: input.customMacros.carbs,
+            fats: input.customMacros.fats,
+            image: input.customMacros.image || "",
+            servingSize: "1 serving",
+          });
+          fId = Number((insertResult as unknown as { insertId: number }).insertId ?? 1);
+        }
+      }
+
+      if (input.customMacros) {
+        calories = Math.round(input.customMacros.calories * q);
+        protein = input.customMacros.protein * q;
+        carbs = input.customMacros.carbs * q;
+        fats = input.customMacros.fats * q;
+      } else {
+        if (!fId) throw new Error("Must provide foodId or foodName+customMacros");
+        const food = await db.select().from(foods).where(eq(foods.id, fId)).then((rows) => rows[0]);
+        if (!food) throw new Error("Food not found");
+        calories = Math.round(food.calories * q);
+        protein = Number(food.protein) * q;
+        carbs = Number(food.carbs) * q;
+        fats = Number(food.fats) * q;
+      }
 
       await db.insert(logItems).values({
         logId: input.logId,
-        foodId: input.foodId,
+        foodId: fId!,
         quantity: q,
         calories,
         protein: Number(protein.toFixed(1)),

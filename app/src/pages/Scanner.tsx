@@ -73,23 +73,18 @@ export default function Scanner() {
         fileName,
       })
       .then((apiResult) => {
-        // Ensure we always map the API result strictly back to our database
-        const detectedName = apiResult?.name || apiResult?.detectedFood || "";
-        const matchedDbFood = getMatchedFood(detectedName);
-        resolvedResult = { ...matchedDbFood, confidence: apiResult?.confidence || 0.95 };
+        resolvedResult = apiResult;
       })
       .catch((err) => {
         console.error("Scanning failed:", err);
-        // Fallback in case of API failure: use file name or random valid food
-        let fallbackName = "Butter Chicken"; 
+        // Honest fallback for API failure
+        let fallbackName = "Unrecognized Food"; 
         if (fileName) {
           fallbackName = fileName.replace(/[-_]/g, " ").replace(/\.[^/.]+$/, "");
-        } else {
-          fallbackName = allFoods[Math.floor(Math.random() * allFoods.length)].name;
         }
         
         const matchedDbFood = getMatchedFood(fallbackName);
-        resolvedResult = { ...matchedDbFood, confidence: 0.85 + Math.random() * 0.1 };
+        resolvedResult = { ...matchedDbFood, confidence: 0.3 }; // Honest low confidence
       });
 
     const interval = setInterval(() => {
@@ -135,11 +130,19 @@ export default function Scanner() {
     const dbFood = dbFoods?.find(
       (f) => f.name.toLowerCase() === foodName.toLowerCase()
     );
-    const foodId = dbFood?.id ?? 1;
+    const foodId = dbFood?.id;
 
     await addItem.mutateAsync({
       logId: todayData.log.id,
       foodId,
+      foodName,
+      customMacros: {
+        calories: result.calories,
+        protein: result.protein,
+        carbs: result.carbs,
+        fats: result.fats,
+        image: result.image,
+      },
       quantity: 1,
       mealType: "lunch",
     });
@@ -356,13 +359,20 @@ export default function Scanner() {
 
             <h2 className="font-serif text-2xl text-[#1c1917] mb-1">{result.name}</h2>
             <div className="flex items-center gap-2 mb-6">
-              <span className="bg-[#dcfce7] text-[#15803d] text-xs px-2.5 py-1 rounded-full font-medium">
+              <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${result.confidence < 0.65 ? 'bg-red-100 text-red-700' : 'bg-[#dcfce7] text-[#15803d]'}`}>
                 {(result.confidence * 100).toFixed(0)}% match
               </span>
               <span className="bg-[#fef3c7] text-[#d97706] text-xs px-2.5 py-1 rounded-full font-medium">
-                Indian Cuisine
+                Scanned Food
               </span>
             </div>
+
+            {result.confidence < 0.65 && (
+              <div className="mb-6 p-3 bg-red-50 text-red-700 rounded-xl text-sm border border-red-100 flex items-start gap-2">
+                <span className="text-xl">⚠️</span>
+                <p><strong>Low Confidence:</strong> We're not completely sure what this is. Please verify the nutritional estimates before adding to your log.</p>
+              </div>
+            )}
 
             {/* Calorie Ring */}
             <div className="flex items-center gap-4 mb-6">

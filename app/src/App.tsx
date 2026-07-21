@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router";
 import { lazy, Suspense } from "react";
 import { TRPCProvider } from "@/providers/trpc";
+import { DailyLogProvider } from "@/context/DailyLogContext";
 import BottomNav from "@/components/BottomNav";
 import TopBar from "@/components/TopBar";
 
@@ -42,18 +43,20 @@ function AppLayout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <TRPCProvider>
-      <AppLayout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/thali" element={<ThaliBuilder />} />
-          <Route path="/scanner" element={<Scanner />} />
-          <Route path="/tracker" element={<DayTracker />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/admin/images" element={<StagingImages />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </AppLayout>
+      <DailyLogProvider>
+        <AppLayout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/thali" element={<ThaliBuilder />} />
+            <Route path="/scanner" element={<Scanner />} />
+            <Route path="/tracker" element={<DayTracker />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/admin/images" element={<StagingImages />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </AppLayout>
+      </DailyLogProvider>
     </TRPCProvider>
   );
 }

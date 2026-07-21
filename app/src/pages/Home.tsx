@@ -19,21 +19,11 @@ const categoryIcons: Record<string, React.ElementType> = {
 };
 
 
+import { useDailyLog } from "@/context/DailyLogContext";
+
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
-  const [localLog, setLocalLog] = useState<any>(null);
-
-  useEffect(() => {
-    const existingStr = localStorage.getItem('daily_thali_log');
-    if (existingStr) {
-      try {
-        const existingLog = JSON.parse(existingStr);
-        if (existingLog.date === new Date().toDateString()) {
-          setLocalLog(existingLog);
-        }
-      } catch (e) {}
-    }
-  }, []);
+  const { dailyLog } = useDailyLog();
 
   const { user } = useAuth();
   const userId = user?.id ?? 0;
@@ -59,14 +49,13 @@ export default function Home() {
     span: i % 3 === 0 ? "row-span-2" : "row-span-1",
   }));
 
-  const totals = localLog ? {
-    calories: localLog.calories,
-    protein: localLog.protein,
-    carbs: localLog.carbs,
-    fats: localLog.fats,
-  } : todayData?.totals ?? { calories: 0, protein: 0, carbs: 0, fats: 0 };
   const log = todayData?.log;
   const calorieGoal = log?.calorieGoal ?? 2000;
+
+  // Primary source of truth is dailyLog from localStorage / Context
+  const totals = dailyLog.items.length > 0 ? dailyLog.totals : (todayData?.totals ?? { calories: 0, protein: 0, carbs: 0, fats: 0 });
+  const streak = dailyLog.streakCount > 0 ? dailyLog.streakCount : (log?.streakCount ?? 1);
+  const points = dailyLog.pointsEarned > 0 ? dailyLog.pointsEarned : (log?.pointsEarned ?? 0);
   const calPercent = Math.min((totals.calories / calorieGoal) * 100, 100);
 
   return (
@@ -105,7 +94,7 @@ export default function Home() {
             <h2 className="font-serif text-lg text-[#1c1917]">Today&apos;s Nourishment</h2>
             <Link
               to="/tracker"
-              className="text-xs text-[#c2410c] font-medium flex items-center gap-1"
+              className="text-xs text-[#c2410c] font-medium flex items-center gap-1 hover:underline"
             >
               <TrendingUp className="w-3 h-3" />
               View All
@@ -138,13 +127,13 @@ export default function Home() {
                 <span className="text-sm text-[#78716c] ml-1">/ {calorieGoal} kcal</span>
               </p>
               <div className="flex gap-3 mt-1.5">
-                <span className="text-xs bg-[#fef3c7] text-[#92400e] px-2 py-0.5 rounded-full">
+                <span className="text-xs bg-[#fef3c7] text-[#92400e] px-2 py-0.5 rounded-full font-medium">
                   P: {totals.protein.toFixed(0)}g
                 </span>
-                <span className="text-xs bg-[#dcfce7] text-[#166534] px-2 py-0.5 rounded-full">
+                <span className="text-xs bg-[#dcfce7] text-[#166534] px-2 py-0.5 rounded-full font-medium">
                   C: {totals.carbs.toFixed(0)}g
                 </span>
-                <span className="text-xs bg-[#ffedd5] text-[#9a3412] px-2 py-0.5 rounded-full">
+                <span className="text-xs bg-[#ffedd5] text-[#9a3412] px-2 py-0.5 rounded-full font-medium">
                   F: {totals.fats.toFixed(0)}g
                 </span>
               </div>
@@ -184,33 +173,34 @@ export default function Home() {
       {/* Streak & Points */}
       <section className="px-4 mt-5">
         <div className="grid grid-cols-2 gap-3">
-          <div className="bg-gradient-to-br from-[#fef3c7] to-[#fde68a] rounded-2xl p-4">
+          <div className="bg-gradient-to-br from-[#fef3c7] to-[#fde68a] rounded-2xl p-4 shadow-sm border border-[#fde68a]">
             <Flame className="w-5 h-5 text-[#d97706] mb-2" />
-            <p className="text-2xl font-serif text-[#92400e]">{log?.streakCount ?? 0}</p>
-            <p className="text-xs text-[#b45309]">Day Streak</p>
+            <p className="text-2xl font-serif font-bold text-[#92400e]">{streak}</p>
+            <p className="text-xs font-medium text-[#b45309]">Day Streak</p>
           </div>
-          <div className="bg-gradient-to-br from-[#c2410c] to-[#ea580c] rounded-2xl p-4">
+          <div className="bg-gradient-to-br from-[#c2410c] to-[#ea580c] rounded-2xl p-4 shadow-sm">
             <Award className="w-5 h-5 text-white/80 mb-2" />
-            <p className="text-2xl font-serif text-white">{log?.pointsEarned ?? 0}</p>
-            <p className="text-xs text-white/70">Points Earned</p>
+            <p className="text-2xl font-serif font-bold text-white">{points}</p>
+            <p className="text-xs font-medium text-white/70">Points Earned</p>
           </div>
         </div>
       </section>
 
       {/* Featured Thali or Today's Thali */}
       <section className="px-4 mt-6">
-        <div className="bg-[#fef3c7] rounded-3xl p-5">
-          {localLog && localLog.items?.length > 0 ? (
+        <div className="bg-[#fef3c7] rounded-3xl p-5 border border-[#fde68a]">
+          {dailyLog.items.length > 0 ? (
             <>
               <h2 className="font-serif text-xl text-[#1c1917] mb-1">Today's Thali</h2>
               <p className="text-xs text-[#78716c] mb-4">Your personalized tracked meals for today</p>
               
               <div className="grid grid-cols-3 gap-3">
-                {localLog.items.map((item: any, idx: number) => {
+                {dailyLog.items.slice(0, 6).map((item, idx) => {
                   const dbItem = allFoods.find(f => f.id === item.foodId);
+                  const imageSrc = item.image || dbItem?.image || "/hero-thali.jpg";
                   return (
-                    <div key={`${item.foodId}-${idx}`} className="bg-white rounded-2xl overflow-hidden shadow-sm">
-                      <img src={dbItem?.image || "/hero-thali.jpg"} alt={item.name} className="w-full h-20 object-cover" />
+                    <div key={`${item.id}-${idx}`} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#e7e5e4]/50">
+                      <img src={imageSrc} alt={item.name} className="w-full h-20 object-cover" />
                       <div className="p-2">
                         <p className="text-[10px] font-medium text-[#1c1917] leading-tight truncate">{item.name}</p>
                         <p className="text-[9px] text-[#78716c]">{item.quantity}x • {item.calories || 0} kcal</p>
@@ -233,7 +223,7 @@ export default function Home() {
                 ].map((item) => {
                   const dbItem = allFoods.find(f => f.name === item.name);
                   return (
-                  <div key={item.name} className="bg-white rounded-2xl overflow-hidden shadow-sm">
+                  <div key={item.name} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-[#e7e5e4]/50">
                     <img src={dbItem?.image || item.fallbackImg} alt={item.name} className="w-full h-20 object-cover" />
                     <div className="p-2">
                       <p className="text-[10px] font-medium text-[#1c1917] leading-tight">{item.name}</p>
@@ -248,7 +238,7 @@ export default function Home() {
 
           <div className="mt-4 flex items-center justify-between bg-white/60 rounded-xl px-4 py-2.5">
             <span className="text-sm text-[#1c1917] font-medium">Total</span>
-            <span className="text-sm text-[#c2410c] font-serif font-medium">{totals.calories} kcal</span>
+            <span className="text-sm text-[#c2410c] font-serif font-bold">{totals.calories} kcal</span>
           </div>
         </div>
       </section>

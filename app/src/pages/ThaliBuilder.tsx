@@ -47,11 +47,16 @@ const layerMap: Record<number, keyof typeof defaultLayers> = {
 
 const defaultLayers = { dal: false, rice: false, curry: false, roti: false };
 
+import { useDailyLog } from "@/context/DailyLogContext";
+import { Sparkles, Award } from "lucide-react";
+
+// (Inside component):
 export default function ThaliBuilder() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const userId = user?.id ?? 1;
   const utils = trpc.useUtils();
+  const { saveMealLog } = useDailyLog();
 
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
   const [thaliItems, setThaliItems] = useState<
@@ -59,6 +64,7 @@ export default function ThaliBuilder() {
   >([]);
   const [mealType, setMealType] = useState<"breakfast" | "lunch" | "dinner" | "snack">("lunch");
   const [showConfirm, setShowConfirm] = useState(false);
+  const [toastDetails, setToastDetails] = useState({ message: "", points: 50 });
 
   const categories = foodCategories;
   const popularFoods = allFoods;
@@ -70,8 +76,6 @@ export default function ThaliBuilder() {
   const addItem = trpc.log.addItem.useMutation({
     onSuccess: () => {
       utils.log.today.invalidate();
-      setShowConfirm(true);
-      setTimeout(() => setShowConfirm(false), 2000);
     },
   });
 
@@ -136,43 +140,37 @@ export default function ThaliBuilder() {
   };
 
   const saveThali = async () => {
-    if (!todayData?.log || thaliItems.length === 0) return;
-    for (const item of thaliItems) {
-      await addItem.mutateAsync({
-        logId: todayData.log.id,
-        foodId: item.foodId,
-        quantity: item.quantity,
-        mealType,
-      });
-    }
-    
-    const payload = {
-      date: new Date().toDateString(),
-      calories: nutrition.calories,
-      protein: nutrition.protein,
-      carbs: nutrition.carbs,
-      fats: nutrition.fats,
-      items: thaliItems,
-    };
-    
-    const existingStr = localStorage.getItem('daily_thali_log');
-    if (existingStr) {
+    if (thaliItems.length === 0) return;
+
+    // Save to global localStorage Context
+    const { pointsEarned } = saveMealLog(mealType, thaliItems);
+
+    // Background sync to DB if connected
+    if (todayData?.log) {
       try {
-        const existingLog = JSON.parse(existingStr);
-        if (existingLog.date === payload.date) {
-          payload.calories += existingLog.calories;
-          payload.protein += existingLog.protein;
-          payload.carbs += existingLog.carbs;
-          payload.fats += existingLog.fats;
-          payload.items = [...existingLog.items, ...payload.items];
+        for (const item of thaliItems) {
+          addItem.mutate({
+            logId: todayData.log.id,
+            foodId: item.foodId,
+            quantity: item.quantity,
+            mealType,
+          });
         }
       } catch (e) {}
     }
-    
-    localStorage.setItem('daily_thali_log', JSON.stringify(payload));
 
+    const categoryCapitalized = mealType.charAt(0).toUpperCase() + mealType.slice(1);
+    setToastDetails({
+      message: `🎉 Meal Saved to ${categoryCapitalized}!`,
+      points: pointsEarned,
+    });
+    setShowConfirm(true);
     setThaliItems([]);
-    navigate("/");
+
+    setTimeout(() => {
+      setShowConfirm(false);
+      navigate("/tracker");
+    }, 1500);
   };
 
   return (
@@ -363,11 +361,24 @@ export default function ThaliBuilder() {
         </div>
       </div>
 
-      {/* Success Toast */}
+      {/* Success Modal */}
       {showConfirm && (
-        <div className="fixed top-20 left-1/2 -translate-x-1/2 z-50 bg-[#15803d] text-white px-5 py-3 rounded-2xl shadow-lg flex items-center gap-2 animate-fade-in-up">
-          <Check className="w-4 h-4" />
-          <span className="text-sm font-medium">Saved to your daily log!</span>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm animate-fade-in">
+          <div className="bg-white rounded-3xl p-6 shadow-2xl max-w-sm w-full text-center transform border border-[#e7e5e4] animate-scale-up">
+            <div className="w-16 h-16 bg-gradient-to-tr from-[#c2410c] to-[#f97316] rounded-full mx-auto flex items-center justify-center mb-4 shadow-lg shadow-[#c2410c]/30 animate-bounce">
+              <Sparkles className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="font-serif text-xl font-bold text-[#1c1917] mb-1">
+              {toastDetails.message}
+            </h3>
+            <div className="inline-flex items-center gap-1.5 bg-[#fef3c7] text-[#b45309] font-semibold text-sm px-4 py-1.5 rounded-full my-3 border border-[#fde68a]">
+              <Award className="w-4 h-4 text-[#d97706]" />
+              +{toastDetails.points} Points Earned!
+            </div>
+            <p className="text-xs text-[#78716c] mt-2">
+              Redirecting to Day Tracker...
+            </p>
+          </div>
         </div>
       )}
     </div>

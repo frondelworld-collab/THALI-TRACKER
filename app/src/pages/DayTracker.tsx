@@ -14,6 +14,9 @@ import {
   ChevronRight,
 } from "lucide-react";
 
+import { useDailyLog } from "@/context/DailyLogContext";
+import { allFoods } from "@/data/foodData";
+
 const mealIcons = {
   breakfast: { icon: Coffee, color: "bg-[#fef3c7] text-[#d97706]" },
   lunch: { icon: Sun, color: "bg-[#dcfce7] text-[#15803d]" },
@@ -27,6 +30,7 @@ export default function DayTracker() {
   const { user } = useAuth();
   const userId = user?.id ?? 1;
   const utils = trpc.useUtils();
+  const { dailyLog, removeItemLog } = useDailyLog();
 
   const { data: todayData } = trpc.log.today.useQuery({ userId });
   const removeItem = trpc.log.removeItem.useMutation({
@@ -34,8 +38,6 @@ export default function DayTracker() {
   });
 
   const log = todayData?.log;
-  const items = todayData?.items ?? [];
-  const totals = todayData?.totals ?? { calories: 0, protein: 0, carbs: 0, fats: 0 };
   const calorieGoal = log?.calorieGoal ?? 2000;
   const proteinGoal = log?.proteinGoal ?? 60;
   const carbsGoal = log?.carbsGoal ?? 250;
@@ -43,6 +45,27 @@ export default function DayTracker() {
 
   const today = new Date();
   const currentDay = today.getDay();
+
+  // Combine items from dailyLog (localStorage primary) and DB fallback
+  const localItems = dailyLog.items;
+  const dbItems = (todayData?.items ?? []).map((i) => ({
+    id: String(i.id),
+    foodId: i.foodId,
+    name: i.foodName ?? "Food",
+    quantity: Number(i.quantity),
+    calories: i.calories,
+    protein: Number(i.protein),
+    carbs: Number(i.carbs),
+    fats: Number(i.fats),
+    servingSize: i.servingSize,
+    image: i.foodImage ?? undefined,
+    mealType: i.mealType as "breakfast" | "lunch" | "dinner" | "snack",
+  }));
+
+  const items = localItems.length > 0 ? localItems : dbItems;
+
+  const totals = localItems.length > 0 ? dailyLog.totals : (todayData?.totals ?? { calories: 0, protein: 0, carbs: 0, fats: 0 });
+  const streak = dailyLog.streakCount > 0 ? dailyLog.streakCount : (log?.streakCount ?? 1);
 
   // Group items by meal type
   const mealsByType = {
@@ -87,6 +110,14 @@ export default function DayTracker() {
     },
   ];
 
+  const handleRemoveItem = (itemId: string) => {
+    removeItemLog(itemId);
+    const numId = parseInt(itemId, 10);
+    if (!isNaN(numId)) {
+      removeItem.mutate({ itemId: numId });
+    }
+  };
+
   return (
     <div className="max-w-lg mx-auto px-4 pb-8">
       {/* Header */}
@@ -101,14 +132,14 @@ export default function DayTracker() {
             })}
           </p>
         </div>
-        <div className="flex items-center gap-1.5 bg-[#fef3c7] px-3 py-1.5 rounded-full">
+        <div className="flex items-center gap-1.5 bg-[#fef3c7] px-3 py-1.5 rounded-full border border-[#fde68a]">
           <Flame className="w-4 h-4 text-[#d97706]" />
-          <span className="text-sm font-semibold text-[#92400e]">{log?.streakCount ?? 0}</span>
+          <span className="text-sm font-semibold text-[#92400e]">{streak} Day Streak</span>
         </div>
       </div>
 
       {/* Week Strip */}
-      <div className="flex justify-between mb-5 bg-white rounded-2xl p-3 border border-[#e7e5e4]/50">
+      <div className="flex justify-between mb-5 bg-white rounded-2xl p-3 border border-[#e7e5e4]/50 shadow-sm">
         {daysOfWeek.map((day, i) => {
           const isToday = i === currentDay;
           return (
@@ -132,12 +163,12 @@ export default function DayTracker() {
       </div>
 
       {/* Calorie Ring */}
-      <div className="bg-white rounded-3xl p-5 border border-[#e7e5e4]/50 mb-5">
+      <div className="bg-white rounded-3xl p-5 border border-[#e7e5e4]/50 shadow-sm mb-5">
         <div className="flex items-center justify-between mb-4">
           <h2 className="font-medium text-[#1c1917]">Daily Progress</h2>
           <Link
             to="/profile"
-            className="text-xs text-[#c2410c] flex items-center gap-0.5"
+            className="text-xs text-[#c2410c] flex items-center gap-0.5 font-medium hover:underline"
           >
             <Target className="w-3 h-3" />
             Edit Goals
@@ -161,7 +192,7 @@ export default function DayTracker() {
             </svg>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <span className="text-xl font-serif font-bold text-[#1c1917]">{totals.calories}</span>
-              <span className="text-[9px] text-[#78716c]">/ {calorieGoal}</span>
+              <span className="text-[9px] text-[#78716c]">/ {calorieGoal} kcal</span>
             </div>
           </div>
 
@@ -204,9 +235,9 @@ export default function DayTracker() {
             const mealCalories = mealItems.reduce((sum, i) => sum + i.calories, 0);
 
             return (
-              <div key={mealType} className="bg-white rounded-2xl border border-[#e7e5e4]/50 overflow-hidden">
+              <div key={mealType} className="bg-white rounded-2xl border border-[#e7e5e4]/50 shadow-sm overflow-hidden">
                 {/* Meal Header */}
-                <div className="flex items-center justify-between px-4 py-3 border-b border-[#e7e5e4]/30">
+                <div className="flex items-center justify-between px-4 py-3 border-b border-[#e7e5e4]/30 bg-[#fafaf9]">
                   <div className="flex items-center gap-2.5">
                     <div className={`w-8 h-8 ${color} rounded-xl flex items-center justify-center`}>
                       <Icon className="w-4 h-4" />
@@ -230,47 +261,52 @@ export default function DayTracker() {
                 {/* Meal Items */}
                 {mealItems.length > 0 ? (
                   <div className="divide-y divide-[#f5f5f4]">
-                    {mealItems.map((item) => (
-                      <div key={item.id} className="flex items-center gap-3 px-4 py-3">
-                        {item.foodImage ? (
-                          <img
-                            src={item.foodImage}
-                            alt={item.foodName ?? ""}
-                            className="w-10 h-10 rounded-xl object-cover"
-                          />
-                        ) : (
-                          <div className="w-10 h-10 bg-[#f5f5f4] rounded-xl flex items-center justify-center">
-                            <span className="text-xs text-[#78716c]">?</span>
+                    {mealItems.map((item) => {
+                      const dbFood = allFoods.find((f) => f.id === item.foodId);
+                      const displayImg = item.image || dbFood?.image;
+                      return (
+                        <div key={item.id} className="flex items-center gap-3 px-4 py-3 hover:bg-[#fdfbf5] transition-colors">
+                          {displayImg ? (
+                            <img
+                              src={displayImg}
+                              alt={item.name}
+                              className="w-10 h-10 rounded-xl object-cover"
+                            />
+                          ) : (
+                            <div className="w-10 h-10 bg-[#f5f5f4] rounded-xl flex items-center justify-center font-serif font-bold text-[#c2410c] text-xs">
+                              {item.name.charAt(0)}
+                            </div>
+                          )}
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm text-[#1c1917] font-medium truncate">
+                              {item.name}
+                            </p>
+                            <p className="text-[10px] text-[#78716c]">
+                              {Number(item.quantity).toFixed(0)}x {item.servingSize || "serving"}
+                            </p>
                           </div>
-                        )}
-                        <div className="flex-1 min-w-0">
-                          <p className="text-sm text-[#1c1917] font-medium truncate">
-                            {item.foodName}
-                          </p>
-                          <p className="text-[10px] text-[#78716c]">
-                            {Number(item.quantity).toFixed(1)}x {item.servingSize}
-                          </p>
+                          <div className="flex items-center gap-2">
+                            <span className="text-xs font-semibold text-[#c2410c]">
+                              {item.calories} kcal
+                            </span>
+                            <button
+                              onClick={() => handleRemoveItem(item.id)}
+                              className="w-6 h-6 rounded-full bg-[#fef2f2] flex items-center justify-center hover:bg-[#fecaca] transition-colors"
+                              title="Delete item"
+                            >
+                              <Trash2 className="w-3 h-3 text-[#dc2626]" />
+                            </button>
+                          </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-xs font-medium text-[#c2410c]">
-                            {item.calories} kcal
-                          </span>
-                          <button
-                            onClick={() => removeItem.mutate({ itemId: item.id })}
-                            className="w-6 h-6 rounded-full bg-[#fef2f2] flex items-center justify-center hover:bg-[#fecaca] transition-colors"
-                          >
-                            <Trash2 className="w-3 h-3 text-[#dc2626]" />
-                          </button>
-                        </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 ) : (
                   <div className="px-4 py-5 text-center">
                     <p className="text-xs text-[#78716c]">
                       No items logged for {mealType}.{" "}
-                      <Link to="/thali" className="text-[#c2410c] font-medium">
-                        Add food
+                      <Link to="/thali" className="text-[#c2410c] font-medium hover:underline">
+                        + Add food
                       </Link>
                     </p>
                   </div>
