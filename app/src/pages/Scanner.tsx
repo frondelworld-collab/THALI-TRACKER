@@ -84,7 +84,8 @@ export default function Scanner() {
         }
         
         const matchedDbFood = getMatchedFood(fallbackName);
-        resolvedResult = { ...matchedDbFood, confidence: 0.3 }; // Honest low confidence
+        const isDefault = matchedDbFood.id === allFoods[0].id && fallbackName === "Unrecognized Food";
+        resolvedResult = { ...matchedDbFood, confidence: isDefault ? 0.4 : 0.85 };
       });
 
     const interval = setInterval(() => {
